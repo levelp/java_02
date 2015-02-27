@@ -1,6 +1,5 @@
-/**
- *
- */
+// ѕусть есть класс, который что-то выводит на консоль
+//-->
 public class MyClass {
 
     public void show() {
@@ -11,3 +10,4 @@ public class MyClass {
         return "SHOW";
     }
 }
+//<--

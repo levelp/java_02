@@ -11,6 +11,7 @@ public class Test {
     }
 
     static void showAllData(String className) throws Exception {
+        //-->
         System.out.println("Show class: " + className);
 
         // Получаю экземпляр класса
@@ -19,19 +20,18 @@ public class Test {
         // Создаём объект (экземпляр класса className)
         Object obj = c.newInstance();
 
-        // TODO: Вывести все поля
-        // Получаем массив полей
+        // Получаем массив полей и выводим значения
         Field[] fields = c.getDeclaredFields();
         for (Field field : fields) {
-            System.out.print(field.getName() + " = ");
             Object value = field.get(obj);
-            System.out.println(value);
+            System.out.println(field.getName() + " = " + value);
         }
 
-        // TODO: Вызвать все методы
+        // Вызываем все методы
         Method[] methods = c.getDeclaredMethods();
         for (Method method : methods) {
             method.invoke(obj);
         }
+        //<--
     }
 }

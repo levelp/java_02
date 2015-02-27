@@ -6,22 +6,26 @@ import java.io.PrintStream;
 
 import static junit.framework.Assert.assertEquals;
 
-/**
- *
- */
+// » есть тест, который должен проверить что класс выводит на консоль
 public class MyClassTest {
 
     @Test
     public void voidMethod() throws IOException {
+        // —равнить строку с заданной очень просто
+        //-->
         MyClass myClass = new MyClass();
         assertEquals("SHOW", myClass.getText());
+        //<--
 
+        // ј дл€ сравнени€ вывода можно перехватить вывод на консоль
+        //-->
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(stream));
         myClass.show();
         stream.close();
 
-        String result = stream.toString();
-        assertEquals("SHOW\r\n", result);
+        String result = stream.toString(); 
+        assertEquals("SHOW\r\n", result); // —равниваем
+        //<--
     }
 }
