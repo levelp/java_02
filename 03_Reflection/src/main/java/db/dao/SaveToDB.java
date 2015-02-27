@@ -6,9 +6,7 @@ import db.model.User;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
-/**
- *
- */
+// Использование аннотаций
 public class SaveToDB {
 
     public static void main(String[] args) {
@@ -19,6 +17,8 @@ public class SaveToDB {
         saveToDB(user);
     }
 
+   
+    //-->
     private static void saveToDB(Object obj) {
         Class c = obj.getClass();
         // Пробегаем по всем полям класса
@@ -45,4 +45,5 @@ public class SaveToDB {
             }
         }
     }
+    //<--
 }
