@@ -148,6 +148,32 @@ Object string = cStringArray.newInstance();
 Пытаемся создать экземпляр класса
 Выводим экземпляр класса
 Создаю экземпляр класса
+
+Использование ссылки this
+-------------------------
+``` java
+        // Создаём журнал
+        Journal journal = new Journal();
+
+        // И двух подписчиков
+        User A = new User("Петя");
+        A.subscribe(journal);
+        B.subscribe(journal);
+        B.subscribe(journal);
+
+        // Два выпуска журнала
+        journal.release("Сентябрь 2014");
+        journal.release("Октябрь 2014");
+```
+``` java
+        // Когда журнал выходит
+        public void release(String name) {
+            for (User user : users) {
+                // Он отправляется всем подписчикам
+                user.send(name);
+            }
+        }
+```
 Добавляем свой обработчик нестандартных протоколов
 Вывод протокола для отладки:
 System.out.println("protocol = " + protocol);
