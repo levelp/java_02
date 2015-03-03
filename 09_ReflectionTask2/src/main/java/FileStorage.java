@@ -1,5 +1,7 @@
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.Scanner;
 
 /**
  *
@@ -28,7 +30,12 @@ public class FileStorage {
      * @param fileName имя файла
      * @return объект
      */
-    public static Object load(String fileName) {
+    public static Object load(String fileName) throws FileNotFoundException {
+        Scanner scanner = new Scanner(new File(fileName));
+        // Считываем имя класса
+        String className = scanner.nextLine();
+
+        scanner.close();
         return null;
     }
 }
