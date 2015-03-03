@@ -382,3 +382,141 @@ assertEquals();
 
 .\07_JUnit_Void\pom.xml
 .\07_JUnit_Void\src\main\java\MyClass.java
+Пусть есть класс, который что-то выводит на консоль
+``` java
+public class MyClass {
+
+    public void show() {
+        System.out.println(getText());
+    }
+
+    String getText() {
+        return "SHOW";
+    }
+}
+```
+.\07_JUnit_Void\src\test\java\MyClassTest.java
+И есть тест, который должен проверить что класс выводит на консоль
+Сравнить строку с заданной очень просто
+``` java
+        MyClass myClass = new MyClass();
+        assertEquals("SHOW", myClass.getText());
+```
+А для сравнения вывода можно перехватить вывод на консоль
+``` java
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(stream));
+        myClass.show();
+        stream.close();
+
+        String result = stream.toString();
+        assertEquals("SHOW\r\n", result); // Сравниваем
+```
+.\08_ReflectionTask\pom.xml
+.\08_ReflectionTask\src\main\java\A.java
+.\08_ReflectionTask\src\main\java\B.java
+.\08_ReflectionTask\src\main\java\Calc.java
+.\08_ReflectionTask\src\main\java\Calc2.java
+.\08_ReflectionTask\src\test\java\ATest.java
+Reflection API
+--------------
+``` java
+        // Загружаем класс A
+        Class cls = Class.forName("A");
+        // Создаём экземпляр класса A
+        Object obj = cls.newInstance();
+        // Получаем метод по имени
+        Method method = cls.getMethod("newMethod");
+        // Вызываем метод и получаем значение
+        Integer integer = (Integer) method.invoke(obj);
+        System.out.println("integer = " + integer);
+
+        // Вызываем все статические методы
+        for (Method m : cls.getDeclaredMethods()) {
+            if ((m.getModifiers() & Modifier.STATIC) == 0)
+                continue;
+            m.invoke(null);
+        }
+```
+.\08_ReflectionTask\src\test\java\CalcTest.java
+.\08_ReflectionTask\src\test\java\CreateInstance.java
+Object objectA = new A();
+.\08_ReflectionTask\src\test\java\Test.java
+``` java
+        System.out.println("Show class: " + className);
+
+        // Получаю экземпляр класса
+        Class c = Class.forName(className);
+
+        // Создаём объект (экземпляр класса className)
+        Object obj = c.newInstance();
+
+        // Получаем массив полей и выводим значения
+        Field[] fields = c.getDeclaredFields();
+        for (Field field : fields) {
+            Object value = field.get(obj);
+            System.out.println(field.getName() + " = " + value);
+        }
+
+        // Вызываем все методы
+        Method[] methods = c.getDeclaredMethods();
+        for (Method method : methods) {
+            method.invoke(obj);
+        }
+```
+.\09_ReflectionTask2\pom.xml
+.\09_ReflectionTask2\src\main\java\Circle.java
+.\09_ReflectionTask2\src\main\java\FileStorage.java
+Сохраняем все поля: c.getDeclaredFields()
+Получаем доступ к
+private/protected/package local
+``` java
+            field.setAccessible(true);
+```
+TODO: реализовать
+Считываем имя класса
+.\09_ReflectionTask2\src\main\java\Point.java
+.\09_ReflectionTask2\src\main\java\Segment.java
+.\09_ReflectionTask2\src\test\java\SaveLoadTest.java
+.\11_Timer\pom.xml
+.\11_Timer\src\main\java\MainForm.java
+SimpleDateFormat simpleDateFormat = new SimpleDateFormat("mm:");
+Сколько секунд прошло
+System.out.println("inSecond: " + inSeconds);
+.\11_Timer\src\main\java\MyTimerTask.java
+XORTest - Отличия Java от C++
+=============================
+
+
+.\98_XORTest\cpp_check.cpp
+.\98_XORTest\pom.xml
+.\98_XORTest\src\main\java\com\demo\Main.java
+.\JavaFX\pom.xml
+.\Q1\pom.xml
+.\Q1\src\main\java\Resume.java
+...
+.\Q1\src\main\java\User.java
+sendEmail();
+.\Q1\src\test\java\UserTest.java
+Создаём тестового пользователя
+Параметры
+.\SwingDemo\pom.xml
+.\SwingDemo\src\main\java\MainForm.java
+Получаю значения из интерфейса
+Сумма чисел
+Отправляю результат в интерфейс
+.\Task_Generic\pom.xml
+.\Task_Generic\src\main\java\MyList.java
+Новый элемент становится первым
+и ссылается на тот список, который был до операции
+добавления
+Новый элемент -> последний
+Новый элемент добавляем в конец списка
+.\Task_Generic\src\test\java\ListTest.java
+Восстанавливаем вывод на консоль
+.\pom.xml
+﻿Домашнее задание
+----------------
+* Дополнить классы модели конструкторами, equals, hashCode, toString.
+* Реализовать типы объектной модели через enum.
+
