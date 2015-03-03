@@ -6,18 +6,18 @@ import java.io.PrintStream;
 
 import static junit.framework.Assert.assertEquals;
 
-// И есть тест, который должен проверить что класс выводит на консоль
+// Р РµСЃС‚СЊ С‚РµСЃС‚, РєРѕС‚РѕСЂС‹Р№ РґРѕР»Р¶РµРЅ РїСЂРѕРІРµСЂРёС‚СЊ С‡С‚Рѕ РєР»Р°СЃСЃ РІС‹РІРѕРґРёС‚ РЅР° РєРѕРЅСЃРѕР»СЊ
 public class MyClassTest {
 
     @Test
     public void voidMethod() throws IOException {
-        // Сравнить строку с заданной очень просто
+        // РЎСЂР°РІРЅРёС‚СЊ СЃС‚СЂРѕРєСѓ СЃ Р·Р°РґР°РЅРЅРѕР№ РѕС‡РµРЅСЊ РїСЂРѕСЃС‚Рѕ
         //-->
         MyClass myClass = new MyClass();
         assertEquals("SHOW", myClass.getText());
         //<--
 
-        // А для сравнения вывода можно перехватить вывод на консоль
+        // Рђ РґР»СЏ СЃСЂР°РІРЅРµРЅРёСЏ РІС‹РІРѕРґР° РјРѕР¶РЅРѕ РїРµСЂРµС…РІР°С‚РёС‚СЊ РІС‹РІРѕРґ РЅР° РєРѕРЅСЃРѕР»СЊ
         //-->
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(stream));
@@ -25,7 +25,7 @@ public class MyClassTest {
         stream.close();
 
         String result = stream.toString(); 
-        assertEquals("SHOW\r\n", result); // Сравниваем
+        assertEquals("SHOW\r\n", result); // РЎСЂР°РІРЅРёРІР°РµРј
         //<--
     }
 }
