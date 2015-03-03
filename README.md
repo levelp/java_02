@@ -46,16 +46,20 @@ Enum - перечисления
 
 
 
+.\00_enum\pom.xml
+.\00_enum\src\main\java\Season.java
 Времена года
 ``` java
 enum Season { WINTER, SPRING, SUMMER, AUTUMN }
 ```
+.\00_enum\src\main\java\Sex.java
 Пол: мужской, женский
 ``` java
 public enum Sex {
     MALE, FEMALE
 }
 ```
+.\00_enum\src\main\java\SolarSystemPlanet.java
 Элементы перечисления - экземпляры enum-класса,
 доступные статически.
 Планеты солнечной системы
@@ -77,17 +81,21 @@ public enum SolarSystemPlanet {
     }
 }
 ```
+.\00_enum\src\test\java\SolarSystemTest.java
 Память
 ======
 * Статическая
 * Динамическая - **new** / GC.
 * Стек - локальные переменные в функциях и методах.
 
+.\01_Memory\pom.xml
+.\01_Memory\src\main\java\A_Memory.java
 Getting the runtime reference from system
 Заводим массив в динамической памяти
 Пауза в 10 миллисекунд
 Заводии в динамической памяти массив
 Номер массива
+.\01_Memory\src\main\java\Constructors.java
 Конструкторы
 ------------
 Конструктор - метод, который вызывается при созданни объекта.
@@ -125,6 +133,7 @@ public class Constructors {
     }
 }
 ```
+.\01_Memory\src\main\java\DynMemoryClass.java
 Стек. Переполнение стека
 ------------------------
 ``` java
@@ -161,23 +170,33 @@ public class DynMemoryClass {
     }
 }
 ```
+.\01_Memory\src\main\java\StaticConstructor.java
 Инициализация выполняется последовательно
 Строчка за строчкой
 Сначала всё со словом static
 Потом инициализация не static переменных
 counter = 0;
+.\02_Boxing\pom.xml
+.\02_Boxing\src\main\java\BoxingDemo.java
 immutable
+.\02_Boxing\src\main\java\ImmutableDemo.java
+.\02_Boxing\src\main\java\TypesDemo.java
+.\02_Boxing\src\test\java\CountChars.java
 Считать количество цифр
 Считать количество букв
 + Подсчитывать количество букв A,
 B, C... всех символов таблицы UTF-8
+.\02_Boxing\src\test\java\TypesDemoTest.java
 Double.MAX_VALUE;
 Double.MIN_VALUE;
 Double.NaN;
 ﻿Generic - создание своего контейнера
 ====================================
 
+.\02_DataStruct\pom.xml
+.\02_DataStruct\src\main\java\ArrayListSizeDemo.java
 arrayList.ensureCapacity(100);
+.\02_DataStruct\src\main\java\MyStack.java
 ``` java
 public class MyStack<T> {
     // Количество элементов
@@ -228,9 +247,12 @@ public class MyStack<T> {
     }
 }
 ```
+.\02_DataStruct\src\main\java\Sort.java
 Сортировка
 Возвращаем результат
+.\02_DataStruct\src\test\java\SortTest.java
 assertArrayEquals(new String[]);
+.\02_DataStruct\src\test\java\StackTest.java
 Reflection API + использоваение в библиотеках ORM
 =================================================
 
@@ -245,6 +267,13 @@ public @interface AnnotationName {
 
 
 
+.\03_Reflection\pom.xml
+.\03_Reflection\src\main\java\annotations\Show.java
+.\03_Reflection\src\main\java\db\annotations\Autoincrement.java
+.\03_Reflection\src\main\java\db\annotations\Field.java
+.\03_Reflection\src\main\java\db\annotations\MyAnnotation.java
+.\03_Reflection\src\main\java\db\annotations\PrimaryKey.java
+.\03_Reflection\src\main\java\db\dao\SaveToDB.java
 Использование аннотаций
 ``` java
     private static void saveToDB(Object obj) {
@@ -274,13 +303,24 @@ public @interface AnnotationName {
         }
     }
 ```
+.\03_Reflection\src\main\java\db\model\User.java
 @Field("PASSWORD")
+.\03_Reflection\src\main\java\simple\AnnotationDemo.java
+.\03_Reflection\src\main\java\simple\MyClass.java
+.\03_Reflection\src\test\java\classes\ReflectionTest.java
+.\03_Reflection\src\test\java\classes\ShowClass.java
 По объекту получаем класс
 Значение и имя класса
 Получаем класс по имени класса
 Пытаемся создать экземпляр класса
 Выводим экземпляр класса
+.\03_Reflection\src\test\java\fields\ShowAllFields.java
+.\03_Reflection\src\test\java\fields\ShowFieldsWithAnnotation.java
+.\03_Reflection\src\test\java\methods\CallAllMethods.java
 Создаю экземпляр класса
+.\04_Object_Equals_hashCode_toString\pom.xml
+.\04_Object_Equals_hashCode_toString\src\main\java\Equals.java
+.\04_Object_Equals_hashCode_toString\src\main\java\ThisLink.java
 
 Использование ссылки this
 -------------------------
@@ -307,8 +347,17 @@ public @interface AnnotationName {
             }
         }
 ```
+.\04_Object_Equals_hashCode_toString\src\main\java\geometry\NamedPoint.java
+.\04_Object_Equals_hashCode_toString\src\main\java\geometry\Point.java
 Координаты
 Double.hashCode(y);
+.\04_Object_Equals_hashCode_toString\src\main\java\geometry\PrimaryKey.java
+.\04_Object_Equals_hashCode_toString\src\main\java\geometry\Segment.java
+.\04_Object_Equals_hashCode_toString\src\main\java\geometry\Settings.java
+.\04_Object_Equals_hashCode_toString\src\test\java\HashMapTest.java
+.\04_Object_Equals_hashCode_toString\src\test\java\PointTest.java
+.\05_URL\pom.xml
+.\05_URL\src\test\java\URLTest.java
 Добавляем свой обработчик нестандартных протоколов
 Вывод протокола для отладки:
 System.out.println("protocol = " + protocol);
@@ -316,11 +365,20 @@ System.out.println("protocol = " + protocol);
 Проверяем разбор нестандартного URL
 Разбор стандартных URL по-прежнему работает
 System.out.println(url.getContent());
+.\06_Shapes\pom.xml
+.\06_Shapes\src\main\java\Circle.java
 TODO: показать
+.\06_Shapes\src\main\java\Point.java
+.\06_Shapes\src\main\java\Rectangle.java
 TODO: показать
+.\06_Shapes\src\main\java\Shape.java
+.\06_Shapes\src\main\java\Triangle.java
 TODO: показать
+.\06_Shapes\src\test\java\ShapesTest.java
 Треугольник
 assertEquals();
 ﻿Тестирование что метод пишет на консоль
 ---------------------------------------
 
+.\07_JUnit_Void\pom.xml
+.\07_JUnit_Void\src\main\java\MyClass.java

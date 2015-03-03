@@ -73,7 +73,7 @@ for file_name in sorted(all_files):
             print(line.rstrip())
         print()
         continue
-    # print(file_name)
+    print(file_name)
 
     parse(file_name)
 
