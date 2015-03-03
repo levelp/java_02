@@ -1,3 +1,6 @@
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
 /**
  *
  */
@@ -8,8 +11,15 @@ public class FileStorage {
      * @param obj      объект
      * @param fileName имя файла
      */
-    public static void save(Object obj, String fileName) {
-
+    public static void save(Object obj, String fileName)
+            throws FileNotFoundException {
+        PrintWriter writer = new PrintWriter(
+                fileName
+        );
+        Class c = obj.getClass();
+        writer.println(c.getName());
+        // TODO: реализовать
+        writer.close();
     }
 
     /**
