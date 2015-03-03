@@ -1,7 +1,5 @@
 import org.junit.Test;
 
-import java.io.FileNotFoundException;
-
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -11,7 +9,7 @@ public class SaveLoadTest {
 
 
     @Test
-    public void saveLoadPoint() throws FileNotFoundException, IllegalAccessException {
+    public void saveLoadPoint() throws Exception {
         Point p = new Point(1.0, 2.2);
         FileStorage.save(p, "p.txt");
         Point p2 = (Point) FileStorage.load("p.txt");
