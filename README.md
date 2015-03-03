@@ -77,16 +77,27 @@ public enum SolarSystemPlanet {
     }
 }
 ```
+Память
+======
+* Статическая
+* Динамическая - **new** / GC.
+* Стек - локальные переменные в функциях и методах.
+
+Getting the runtime reference from system
+Заводим массив в динамической памяти
+Пауза в 10 миллисекунд
+Заводии в динамической памяти массив
+Номер массива
 Конструкторы
 ------------
-
+Конструктор - метод, который вызывается при созданни объекта.
 ``` java
 public class Constructors {
 
     public static void main(String[] args) {
         MyClass myClass = new MyClass(2);
         MyClass myClass1 = new MyClass(2.0);
-
+        MyClass myClass3 = new MyClass("Test");
         MyClass2 myClass2 = new MyClass2();
     }
 
@@ -103,6 +114,10 @@ public class Constructors {
         public MyClass(int i) {  // Один параметр - int
             System.out.println("Конструктор: i = " + i);
         }
+
+        public MyClass(String s) {
+            System.out.println("Конструктор: s = " + s);
+        }
     }
 
     static class MyClass2 extends MyClass {
@@ -110,8 +125,46 @@ public class Constructors {
     }
 }
 ```
-Getting the runtime reference from system
-Заводим массив в динамической памяти
+Стек. Переполнение стека
+------------------------
+``` java
+public class DynMemoryClass {
+
+    // Статическая память
+    static int staticVar = 10;
+
+    public static void main(String[] args) {
+        // Стек + динамическая
+        MyClass myClass = new MyClass();
+
+        // Стек
+        int i = 2;
+        rec(i);
+    }
+
+    private static void rec(int i) {
+        double d = 10; // Стек
+        // Ссылка myClass - в стеке
+        // А см объект MyClass - в куче
+        // (в динамической памяти)
+        MyClass myClass = new MyClass();
+        System.out.println("i = " + i);
+        rec(i + 1);
+    }
+
+    static public class MyClass {
+        int counter = 0;
+
+        public MyClass() {
+            counter++;
+        }
+    }
+}
+```
+Инициализация выполняется последовательно
+Строчка за строчкой
+Сначала всё со словом static
+Потом инициализация не static переменных
 counter = 0;
 immutable
 Считать количество цифр
@@ -124,7 +177,57 @@ Double.NaN;
 ﻿Generic - создание своего контейнера
 ====================================
 
-System.arraycopy(data, 0, newData, 0, data.length);
+arrayList.ensureCapacity(100);
+``` java
+public class MyStack<T> {
+    // Количество элементов
+    int counter = 0;
+    // Тут реально будем хранить данные
+    Object[] data = new Object[0];
+
+    /**
+     * Добавить значение в стек
+     *
+     * @param value значение
+     */
+    public void push(T value) {
+        ++counter;
+        if (data.length < counter) {
+            Object[] newData = new Object[counter * 2];
+            // Копируем массив встроенными средствами
+            System.arraycopy(data, 0, newData, 0, data.length);
+            // Копируем поэлементно
+            for (int i = 0; i < data.length; ++i)
+                newData[i] = data[i];
+            // Ссылку на новый массив сохраняем
+            data = newData;
+        }
+        // Новое значение
+        data[counter - 1] = value;
+    }
+
+    public int size() {
+        return counter;
+    }
+
+    /**
+     * Получить значение с вершины стека
+     *
+     * @return значение
+     */
+    @SuppressWarnings("unchecked")
+    public T pop() {
+        T value = (T) data[data.length - 1];
+        counter--;
+        if (counter * 2 < data.length) {
+            Object[] newData = new Object[data.length - 1];
+            System.arraycopy(data, 0, newData, 0, data.length - 1);
+            data = newData;
+        }
+        return value;
+    }
+}
+```
 Сортировка
 Возвращаем результат
 assertArrayEquals(new String[]);
@@ -172,8 +275,6 @@ public @interface AnnotationName {
     }
 ```
 @Field("PASSWORD")
-Object obj = cDoubleArray.newInstance();
-Object string = cStringArray.newInstance();
 По объекту получаем класс
 Значение и имя класса
 Получаем класс по имени класса
@@ -189,8 +290,8 @@ Object string = cStringArray.newInstance();
 
         // И двух подписчиков
         User A = new User("Петя");
+        User B = new User("Вася");
         A.subscribe(journal);
-        B.subscribe(journal);
         B.subscribe(journal);
 
         // Два выпуска журнала
@@ -206,6 +307,8 @@ Object string = cStringArray.newInstance();
             }
         }
 ```
+Координаты
+Double.hashCode(y);
 Добавляем свой обработчик нестандартных протоколов
 Вывод протокола для отладки:
 System.out.println("protocol = " + protocol);

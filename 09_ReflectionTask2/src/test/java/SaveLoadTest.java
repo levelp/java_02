@@ -11,7 +11,7 @@ public class SaveLoadTest {
 
 
     @Test
-    public void saveLoadPoint() throws FileNotFoundException {
+    public void saveLoadPoint() throws FileNotFoundException, IllegalAccessException {
         Point p = new Point(1.0, 2.2);
         FileStorage.save(p, "p.txt");
         Point p2 = (Point) FileStorage.load("p.txt");

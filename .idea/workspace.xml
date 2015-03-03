@@ -1,39 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a432e49-66a4-4617-9180-d4496b8837d1" name="Default" comment="Swing пример">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09_ReflectionTask2/09_ReflectionTask2.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09_ReflectionTask2/src/main/java/Circle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09_ReflectionTask2/src/main/java/FileStorage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09_ReflectionTask2/src/main/java/Point.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09_ReflectionTask2/src/test/java/SaveLoadTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/04_Object_Equals_hashCode_toString/src/main/java/geometry/Segment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09_ReflectionTask2/src/main/java/Segment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/01_Memory/intro.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09_ReflectionTask2/pom.xml" />
-      <change type="DELETED" beforePath="C:\Users\gtee\Desktop\java_02\01_Memory\src\main\java\MyClass.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\gtee\Desktop\java_02\01_Memory\src\main\java\Memory.java" afterPath="$PROJECT_DIR$/01_Memory/src/main/java/A_Memory.java" />
-      <change type="MOVED" beforePath="C:\Users\gtee\Desktop\java_02\lesson_02.iml" afterPath="$PROJECT_DIR$/java_02.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/01_Memory/01_Memory.iml" afterPath="$PROJECT_DIR$/01_Memory/01_Memory.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/02_DataStruct/src/main/java/ArrayListSizeDemo.java" afterPath="$PROJECT_DIR$/02_DataStruct/src/main/java/ArrayListSizeDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/02_Boxing/src/main/java/BoxingDemo.java" afterPath="$PROJECT_DIR$/02_Boxing/src/main/java/BoxingDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/01_Memory/src/main/java/Constructors.java" afterPath="$PROJECT_DIR$/01_Memory/src/main/java/Constructors.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/01_Memory/src/main/java/DynMemoryClass.java" afterPath="$PROJECT_DIR$/01_Memory/src/main/java/DynMemoryClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/02_Boxing/src/main/java/ImmutableDemo.java" afterPath="$PROJECT_DIR$/02_Boxing/src/main/java/ImmutableDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/02_DataStruct/src/main/java/MyStack.java" afterPath="$PROJECT_DIR$/02_DataStruct/src/main/java/MyStack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/04_Object_Equals_hashCode_toString/src/main/java/geometry/Point.java" afterPath="$PROJECT_DIR$/04_Object_Equals_hashCode_toString/src/main/java/geometry/Point.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/03_Reflection/src/test/java/classes/ReflectionTest.java" afterPath="$PROJECT_DIR$/03_Reflection/src/test/java/classes/ReflectionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/03_Reflection/src/test/java/fields/ShowAllFields.java" afterPath="$PROJECT_DIR$/03_Reflection/src/test/java/fields/ShowAllFields.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/01_Memory/src/main/java/StaticConstructor.java" afterPath="$PROJECT_DIR$/01_Memory/src/main/java/StaticConstructor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/04_Object_Equals_hashCode_toString/src/main/java/ThisLink.java" afterPath="$PROJECT_DIR$/04_Object_Equals_hashCode_toString/src/main/java/ThisLink.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc.py" afterPath="$PROJECT_DIR$/doc.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/00_enum/pom.xml" afterPath="$PROJECT_DIR$/00_enum/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/01_Memory/pom.xml" afterPath="$PROJECT_DIR$/01_Memory/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/08_ReflectionTask/pom.xml" afterPath="$PROJECT_DIR$/08_ReflectionTask/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="2a432e49-66a4-4617-9180-d4496b8837d1" name="Default" comment="Задача по Reflection API">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/09_ReflectionTask2/src/main/java/FileStorage.java" afterPath="$PROJECT_DIR$/09_ReflectionTask2/src/main/java/FileStorage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/09_ReflectionTask2/src/test/java/SaveLoadTest.java" afterPath="$PROJECT_DIR$/09_ReflectionTask2/src/test/java/SaveLoadTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lesson_02.iws" />
@@ -101,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SaveLoadTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SaveLoadTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/09_ReflectionTask2/src/test/java/SaveLoadTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57530123" vertical-offset="214" max-vertical-offset="675">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="286" max-vertical-offset="729">
+              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,14 +83,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="p.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/p.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.12903225" vertical-offset="0" max-vertical-offset="403">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="FileStorage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/09_ReflectionTask2/src/main/java/FileStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="780">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="741" max-vertical-offset="1682">
+              <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
               <folding>
-                <element signature="e#392#393#0" expanded="true" />
-                <element signature="e#419#420#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -173,8 +152,8 @@
         <option value="$PROJECT_DIR$/09_ReflectionTask2/src/main/java/Circle.java" />
         <option value="$PROJECT_DIR$/09_ReflectionTask2/src/main/java/Segment.java" />
         <option value="$PROJECT_DIR$/09_ReflectionTask2/src/main/java/Point.java" />
-        <option value="$PROJECT_DIR$/09_ReflectionTask2/src/test/java/SaveLoadTest.java" />
         <option value="$PROJECT_DIR$/09_ReflectionTask2/src/main/java/FileStorage.java" />
+        <option value="$PROJECT_DIR$/09_ReflectionTask2/src/test/java/SaveLoadTest.java" />
       </list>
     </option>
   </component>
@@ -293,94 +272,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lesson_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="09_ReflectionTask2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lesson_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="09_ReflectionTask2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lesson_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="09_ReflectionTask2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lesson_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="09_ReflectionTask2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -866,7 +757,7 @@
       <workItem from="1416589425040" duration="3239000" />
       <workItem from="1424979888212" duration="1682000" />
       <workItem from="1424983070041" duration="608000" />
-      <workItem from="1425401024939" duration="3988000" />
+      <workItem from="1425401024939" duration="4603000" />
     </task>
     <task id="LOCAL-00001" summary="Задание на реализацию своей структуры данных используя Generic">
       <created>1415988758078</created>
@@ -886,32 +777,50 @@
       <option name="project" value="LOCAL" />
       <updated>1416336538577</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Задача по Reflection API">
+      <created>1425405042674</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1425405042674</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Задача по Reflection API">
+      <created>1425405266202</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1425405266202</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Задача по Reflection API">
+      <created>1425405339084</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1425405339084</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31243000" />
+    <option name="totallyTimeSpent" value="31858000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1040" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20392157" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34918034" sideWeight="0.3984375" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34863946" sideWeight="0.3984375" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39115646" sideWeight="0.2939453" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27040815" sideWeight="0.2939453" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.06738281" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39115646" sideWeight="0.7060547" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27040815" sideWeight="0.7060547" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25683594" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20019531" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -946,7 +855,8 @@
     <MESSAGE value="Задание на реализацию своей структуры данных используя Generic" />
     <MESSAGE value="Все изменения" />
     <MESSAGE value="Swing пример" />
-    <option name="LAST_COMMIT_MESSAGE" value="Swing пример" />
+    <MESSAGE value="Задача по Reflection API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Задача по Reflection API" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -962,14 +872,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Q1/src/main/java/Resume.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Q1/src/main/java/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
@@ -1061,10 +963,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="746" max-vertical-offset="1107">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#178#179#0" expanded="false" />
-            <element signature="e#211#212#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1097,10 +996,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="870">
           <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
           <folding>
-            <element signature="e#270#271#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#270#271#0" expanded="false" />
+            <element signature="e#318#319#0" expanded="false" />
+            <element signature="e#383#384#0" expanded="false" />
+            <element signature="e#429#430#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1389,22 +1288,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/09_ReflectionTask2/src/main/java/FileStorage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="780">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="741" max-vertical-offset="1682">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
           <folding>
-            <element signature="e#392#393#0" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/09_ReflectionTask2/src/test/java/SaveLoadTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57530123" vertical-offset="214" max-vertical-offset="675">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="286" max-vertical-offset="729">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12903225" vertical-offset="0" max-vertical-offset="403">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
