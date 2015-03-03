@@ -14,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/06_Shapes/06_Shapes.iml" filepath="$PROJECT_DIR$/06_Shapes/06_Shapes.iml" />
       <module fileurl="file://$PROJECT_DIR$/07_JUnit_Void/07_JUnit_Void.iml" filepath="$PROJECT_DIR$/07_JUnit_Void/07_JUnit_Void.iml" />
       <module fileurl="file://$PROJECT_DIR$/08_ReflectionTask/08_ReflectionTask.iml" filepath="$PROJECT_DIR$/08_ReflectionTask/08_ReflectionTask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09_ReflectionTask2/09_ReflectionTask2.iml" filepath="$PROJECT_DIR$/09_ReflectionTask2/09_ReflectionTask2.iml" />
       <module fileurl="file://$PROJECT_DIR$/11_Timer/11_Timer.iml" filepath="$PROJECT_DIR$/11_Timer/11_Timer.iml" />
       <module fileurl="file://$PROJECT_DIR$/98_XORTest/98_XORTest.iml" filepath="$PROJECT_DIR$/98_XORTest/98_XORTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaFX/JavaFX.iml" filepath="$PROJECT_DIR$/JavaFX/JavaFX.iml" />
@@ -21,7 +22,7 @@
       <module fileurl="file://$PROJECT_DIR$/Q1/Q1.iml" filepath="$PROJECT_DIR$/Q1/Q1.iml" />
       <module fileurl="file://$PROJECT_DIR$/SwingDemo/SwingDemo.iml" filepath="$PROJECT_DIR$/SwingDemo/SwingDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Task_Generic/Task_Generic.iml" filepath="$PROJECT_DIR$/Task_Generic/Task_Generic.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lesson_02.iml" filepath="$PROJECT_DIR$/lesson_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_02.iml" filepath="$PROJECT_DIR$/java_02.iml" />
       <module fileurl="file://$PROJECT_DIR$/../lesson_03/lesson_03.iml" filepath="$PROJECT_DIR$/../lesson_03/lesson_03.iml" />
     </modules>
   </component>

@@ -44,13 +44,16 @@ public class ReflectionTest {
     public void createClass() throws ClassNotFoundException, IllegalAccessException, InstantiationException {
         Class c = "foo".getClass();
         assertEquals("java.lang.String", c.getName());
+        String newString = (String) c.newInstance();
+        assertEquals("", newString);
+        assertEquals(0, newString.length());
 
         Class cDoubleArray = Class.forName("[D");
         assertEquals("double[]", cDoubleArray.getCanonicalName());
-        //Object obj = cDoubleArray.newInstance();
+        Object obj = cDoubleArray.newInstance();
 
         Class cStringArray = Class.forName("[[Ljava.lang.String;");
         assertEquals("java.lang.String[][]", cStringArray.getCanonicalName());
-        //Object string = cStringArray.newInstance();
+        Object string = cStringArray.newInstance();
     }
 }

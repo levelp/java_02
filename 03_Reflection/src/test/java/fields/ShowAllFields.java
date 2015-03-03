@@ -15,6 +15,7 @@ public class ShowAllFields {
         MyClass myClass = new MyClass();
         myClass.publicIntField = 10;
         myClass.publicStringField = "Test";
+
         showAllFields(myClass);
     }
 
@@ -31,7 +32,7 @@ public class ShowAllFields {
                 if ((modifiers & Modifier.PUBLIC) != 0)
                     System.out.print("public ");
                 if (modifiers == 0) {
-                    System.out.print("package local");
+                    System.out.print("package local ");
                     field.setAccessible(true);
                 }
                 System.out.println(field.getName() + " = "

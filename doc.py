@@ -74,6 +74,7 @@ for file_name in sorted(all_files):
         print()
         continue
     # print(file_name)
+
     parse(file_name)
 
 

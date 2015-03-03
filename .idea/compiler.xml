@@ -36,7 +36,7 @@
         <module name="05_URL" />
         <module name="06_Shapes" />
         <module name="07_JUnit_Void" />
-        <module name="08_ReflectionTask" />
+        <module name="09_ReflectionTask2" />
         <module name="98_XORTest" />
         <module name="JavaFX" />
         <module name="ModifiersDemo" />

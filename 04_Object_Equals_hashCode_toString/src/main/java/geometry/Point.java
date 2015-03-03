@@ -5,6 +5,7 @@ package geometry;
  */
 public class Point {
     private static final double DELTA = 1e-15;
+    // Координаты
     private double x, y;
 
     public Point(double x, double y) {
@@ -33,8 +34,8 @@ public class Point {
 
     @Override
     public int hashCode() {
-        return Double.hashCode(x) +
-                Double.hashCode(y);
+        return 1;//Double.hashCode(x) +
+        //Double.hashCode(y);
     }
 
     @Override

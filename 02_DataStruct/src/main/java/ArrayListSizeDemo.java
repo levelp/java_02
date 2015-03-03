@@ -9,7 +9,7 @@ public class ArrayListSizeDemo {
 
     public static void main(String[] args) throws Exception {
         arrayList = new ArrayList<Integer>();
-        arrayList.ensureCapacity(100);
+        //arrayList.ensureCapacity(100);
         for (int i = 1; i < 40; i++)
             add(i);
     }

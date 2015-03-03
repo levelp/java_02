@@ -13,8 +13,8 @@ public class ThisLink {
 
         // И двух подписчиков
         User A = new User("Петя");
+        User B = new User("Вася");
         A.subscribe(journal);
-        B.subscribe(journal);
         B.subscribe(journal);
 
         // Два выпуска журнала
