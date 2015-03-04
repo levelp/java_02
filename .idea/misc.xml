@@ -17,6 +17,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/JavaFX/pom.xml" />
         <option value="$PROJECT_DIR$/../lesson_03/02_Boxing/pom.xml" />
         <option value="$PROJECT_DIR$/../lesson_03/02_DataStruct/pom.xml" />
       </set>

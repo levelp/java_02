@@ -22,7 +22,10 @@ public class FileStorage {
         PrintWriter writer = new PrintWriter(
                 fileName
         );
+        // Получаем объект-класс того объекта
+        // который надо сохранить
         Class c = obj.getClass();
+        // Печатаем имя класса
         writer.println(c.getName());
         // Сохраняем все поля: c.getDeclaredFields()
         for (Field field : c.getDeclaredFields()) {
@@ -58,20 +61,26 @@ public class FileStorage {
             // до разделителя (табуляции, пробела,
             // перевода строки)
             String name = scanner.next();
+            assert name.equals(field.getName());
             scanner.next(); // "="
+            //if (field.getType().equals(Double.TYPE)) {
+            //    field.set(instance, scanner.nextDouble());
+            //}
             String value = scanner.next();
             scanner.nextLine();
 
             System.out.println("" + field.getType());
+
+            field.setAccessible(true);
 
             // Как присвоить значение полю произвольного типа?
             // ----------------------------------------------
             // Способ 1 - "много if":
             //-->
             if (field.getType().equals(Double.TYPE))
-                field.setDouble(instance, Double.valueOf(value));
+                field.set(instance, Double.valueOf(value));
             if (field.getType().equals(Integer.TYPE))
-                field.setInt(instance, Integer.valueOf(value));
+                field.set(instance, Integer.valueOf(value));
             //<--
             // Способ 2 - используем Reflection
             if (field.getType().isPrimitive()) {
@@ -80,17 +89,28 @@ public class FileStorage {
                 String typeName = field.getType().getName();
                 System.out.println("typeName = " + typeName);
 
-                //if(field.getType().equals(Character.))
-                String firstLetter = "" + typeName.charAt(0);
-                String fieldClassName = "java.lang." + firstLetter.toUpperCase() +
-                        typeName.substring(1);
-                System.out.println("fieldClassName = " + fieldClassName);
+                String fieldClassName;
+                if (field.getType().equals(Integer.TYPE))
+                    fieldClassName = Integer.class.getName();
+                else if (field.getType().equals(Character.TYPE))
+                    fieldClassName = Character.class.getName();
+                else {
+                    String firstLetter = "" + typeName.charAt(0);
+                    fieldClassName = "java.lang." + firstLetter.toUpperCase() +
+                            typeName.substring(1);
+                    System.out.println("fieldClassName = " + fieldClassName);
+                }
                 //<--
 
                 Class fieldClass = Class.forName(fieldClassName);
-                Method methodValueOf = fieldClass.getMethod("valueOf", String.class);
+                Method methodValueOf =
+                        fieldClass.getMethod("valueOf",
+                                field.getType().equals(Character.TYPE) ?
+                                        Character.TYPE : String.class);
                 // null - для статических методов
-                Object fieldValue = methodValueOf.invoke(null, value);
+                Object fieldValue = methodValueOf.invoke(null,
+                        field.getType().equals(Character.TYPE) ?
+                                value.charAt(0) : value);
                 System.out.println("fieldValue = " + fieldValue);
                 field.set(instance, fieldValue);
             }

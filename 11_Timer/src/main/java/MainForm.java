@@ -75,4 +75,5 @@ public class MainForm {
 
         currentTime.setText(String.format("%02d:%02d.%02d", min, sec, (timeDiff % 1000) / 10));
     }
+
 }

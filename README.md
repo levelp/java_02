@@ -406,7 +406,9 @@ public class MyClass {
 ``` java
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(stream));
+        // Вызываем тестируемый метод
         myClass.show();
+        //
         stream.close();
 
         String result = stream.toString();
@@ -465,16 +467,58 @@ Object objectA = new A();
         }
 ```
 .\09_ReflectionTask2\pom.xml
+.\09_ReflectionTask2\src\main\java\AllCases.java
 .\09_ReflectionTask2\src\main\java\Circle.java
 .\09_ReflectionTask2\src\main\java\FileStorage.java
+TODO: реализовать
+Получаем объект-класс того объекта
+который надо сохранить
+Печатаем имя класса
 Сохраняем все поля: c.getDeclaredFields()
 Получаем доступ к
 private/protected/package local
 ``` java
             field.setAccessible(true);
 ```
-TODO: реализовать
 Считываем имя класса
+Создаем класс по имени
+Создаём экземпляр класса
+Инициализируем поля
+Считываем строчку
+scanner.next() читает символы
+до разделителя (табуляции, пробела,
+перевода строки)
+if (field.getType().equals(Double.TYPE)) {
+field.set(instance, scanner.nextDouble());
+}
+Как присвоить значение полю произвольного типа?
+----------------------------------------------
+Способ 1 - "много if":
+``` java
+            if (field.getType().equals(Double.TYPE))
+                field.set(instance, Double.valueOf(value));
+            if (field.getType().equals(Integer.TYPE))
+                field.set(instance, Integer.valueOf(value));
+```
+Способ 2 - используем Reflection
+Получаем класс-обёртку
+``` java
+                String typeName = field.getType().getName();
+                System.out.println("typeName = " + typeName);
+
+                String fieldClassName;
+                if (field.getType().equals(Integer.TYPE))
+                    fieldClassName = Integer.class.getName();
+                else if (field.getType().equals(Character.TYPE))
+                    fieldClassName = Character.class.getName();
+                else {
+                    String firstLetter = "" + typeName.charAt(0);
+                    fieldClassName = "java.lang." + firstLetter.toUpperCase() +
+                            typeName.substring(1);
+                    System.out.println("fieldClassName = " + fieldClassName);
+                }
+```
+null - для статических методов
 .\09_ReflectionTask2\src\main\java\Point.java
 .\09_ReflectionTask2\src\main\java\Segment.java
 .\09_ReflectionTask2\src\test\java\SaveLoadTest.java
@@ -489,8 +533,29 @@ XORTest - Отличия Java от C++
 
 
 .\98_XORTest\cpp_check.cpp
+``` cpp
+#include <iostream>
+
+using namespace std;
+
+int main(){
+  int a = 3, b = 10;
+
+  a ^= b ^= a ^= b;
+
+  cout << "a = " << a << "   b = " << b << endl;
+
+  a = 3; b = 10;
+
+  a ^= (b ^= (a ^= b));
+
+  cout << "a = " << a << "   b = " << b << endl;
+
+  return 0;
+}
+```
 .\98_XORTest\pom.xml
-.\98_XORTest\src\main\java\com\demo\Main.java
+.\98_XORTest\src\main\java\Main.java
 .\JavaFX\pom.xml
 .\Q1\pom.xml
 .\Q1\src\main\java\Resume.java

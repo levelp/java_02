@@ -21,7 +21,9 @@ public class MyClassTest {
         //-->
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         System.setOut(new PrintStream(stream));
+        // Вызываем тестируемый метод
         myClass.show();
+        //
         stream.close();
 
         String result = stream.toString(); 
