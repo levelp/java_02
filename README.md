@@ -82,6 +82,8 @@ public enum SolarSystemPlanet {
 }
 ```
 .\00_enum\src\test\java\SolarSystemTest.java
+Использование перечислений:
+
 Память
 ======
 * Статическая

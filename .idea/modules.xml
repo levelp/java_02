@@ -3,11 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/00_enum/00_enum.iml" filepath="$PROJECT_DIR$/00_enum/00_enum.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../lesson_03/01_Collections/01_Collections.iml" filepath="$PROJECT_DIR$/../lesson_03/01_Collections/01_Collections.iml" />
       <module fileurl="file://$PROJECT_DIR$/01_Memory/01_Memory.iml" filepath="$PROJECT_DIR$/01_Memory/01_Memory.iml" />
       <module fileurl="file://$PROJECT_DIR$/02_Boxing/02_Boxing.iml" filepath="$PROJECT_DIR$/02_Boxing/02_Boxing.iml" />
       <module fileurl="file://$PROJECT_DIR$/02_DataStruct/02_DataStruct.iml" filepath="$PROJECT_DIR$/02_DataStruct/02_DataStruct.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../lesson_03/02_JavaFX/02_JavaFX.iml" filepath="$PROJECT_DIR$/../lesson_03/02_JavaFX/02_JavaFX.iml" />
       <module fileurl="file://$PROJECT_DIR$/03_Reflection/03_Reflection.iml" filepath="$PROJECT_DIR$/03_Reflection/03_Reflection.iml" />
       <module fileurl="file://$PROJECT_DIR$/04_Object_Equals_hashCode_toString/04_Object_Equals_hashCode_toString.iml" filepath="$PROJECT_DIR$/04_Object_Equals_hashCode_toString/04_Object_Equals_hashCode_toString.iml" />
       <module fileurl="file://$PROJECT_DIR$/05_URL/05_URL.iml" filepath="$PROJECT_DIR$/05_URL/05_URL.iml" />
@@ -17,12 +15,10 @@
       <module fileurl="file://$PROJECT_DIR$/09_ReflectionTask2/09_ReflectionTask2.iml" filepath="$PROJECT_DIR$/09_ReflectionTask2/09_ReflectionTask2.iml" />
       <module fileurl="file://$PROJECT_DIR$/11_Timer/11_Timer.iml" filepath="$PROJECT_DIR$/11_Timer/11_Timer.iml" />
       <module fileurl="file://$PROJECT_DIR$/98_XORTest/98_XORTest.iml" filepath="$PROJECT_DIR$/98_XORTest/98_XORTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ModifiersDemo/ModifiersDemo.iml" filepath="$PROJECT_DIR$/ModifiersDemo/ModifiersDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Q1/Q1.iml" filepath="$PROJECT_DIR$/Q1/Q1.iml" />
       <module fileurl="file://$PROJECT_DIR$/SwingDemo/SwingDemo.iml" filepath="$PROJECT_DIR$/SwingDemo/SwingDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Task_Generic/Task_Generic.iml" filepath="$PROJECT_DIR$/Task_Generic/Task_Generic.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_02.iml" filepath="$PROJECT_DIR$/java_02.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../lesson_03/lesson_03.iml" filepath="$PROJECT_DIR$/../lesson_03/lesson_03.iml" />
     </modules>
   </component>
 </project>

@@ -1,8 +1,7 @@
-/**
- *
- */
+// Использование перечислений:
 public class SolarSystemTest {
     public static void main(String[] args) {
+        // 
         SolarSystemPlanet planet = SolarSystemPlanet.EARTH;
 
         needColonization(planet);
