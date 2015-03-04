@@ -11,6 +11,7 @@
     <name>Java Junior Developer 2</name>
 
     <modules>
+        <module>00_enum</module>
         <module>01_Memory</module>
         <module>02_Boxing</module>
         <module>02_DataStruct</module>
@@ -20,12 +21,12 @@
         <module>06_Shapes</module>
         <module>07_JUnit_Void</module>
         <module>08_ReflectionTask</module>
+        <module>09_ReflectionTask_SaveLoad</module>
         <module>11_Timer</module>
         <module>98_XORTest</module>
         <module>Q1</module>
         <module>Task_Generic</module>
         <module>SwingDemo</module>
-        <module>00_enum</module>
         <module>JavaFX</module>
     </modules>
 </project>

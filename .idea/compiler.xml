@@ -37,6 +37,7 @@
         <module name="06_Shapes" />
         <module name="07_JUnit_Void" />
         <module name="09_ReflectionTask2" />
+        <module name="09_ReflectionTask_SaveLoad" />
         <module name="98_XORTest" />
         <module name="ModifiersDemo" />
         <module name="Q1" />

@@ -3,7 +3,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- *
+ * Тестирование работы FileStorage
  */
 public class SaveLoadTest {
 

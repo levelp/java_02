@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
 import java.util.Scanner;
 
 /**
- *
+ * Сохранение и загрузка произвольного объекта из текстового файла и в файл
  */
 public class FileStorage {
     /**
