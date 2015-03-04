@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>java</groupId>
-    <artifactId>lesson_02</artifactId>
+    <artifactId>java_02</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
     <name>Java Junior Developer 2</name>
@@ -24,8 +24,8 @@
         <module>98_XORTest</module>
         <module>Q1</module>
         <module>Task_Generic</module>
-        <module>ModifiersDemo</module>
         <module>SwingDemo</module>
         <module>00_enum</module>
+        <module>JavaFX</module>
     </modules>
 </project>

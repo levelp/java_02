@@ -13,8 +13,8 @@ public class ListTest extends Assert {
     @Test
     public void testList() throws IOException {
         MyList<String> myList = new MyList<String>();
-        assertEquals(0, myList.size());
         assertNull(myList.root);
+        assertEquals(0, myList.size());
 
         myList.addToBegin("Test");
         assertEquals("Test", myList.root.value);

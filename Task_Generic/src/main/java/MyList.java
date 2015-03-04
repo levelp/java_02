@@ -1,14 +1,14 @@
-/**
- * Односвязанный список
- * Тип элементов - T
- */
+//
+// Свой односвязанный список
+// -------------------------
+// Тип элементов - T
 public class MyList<T> {
     /**
      * Элемент списка
      */
     class MyListElement {
-        T value;
-        MyListElement next;
+        T value; // Значение
+        MyListElement next; // Ссылка на следующий
     }
 
     /**

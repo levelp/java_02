@@ -83,7 +83,22 @@ public enum SolarSystemPlanet {
 ```
 .\00_enum\src\test\java\SolarSystemTest.java
 Использование перечислений:
+Присваивать можем только одно из значений enum'а
+``` java
+        SolarSystemPlanet planet = SolarSystemPlanet.EARTH;
 
+        needColonization(planet);
+```
+``` java
+        Random random = new Random();
+
+        Sex sex = random.nextInt(2) == 0 ? Sex.FEMALE : Sex.MALE;
+        if (sex == Sex.MALE) {
+            System.out.println("Мужской");
+        } else {
+            System.out.println("Женский");
+        }
+```
 Память
 ======
 * Статическая
@@ -574,6 +589,10 @@ sendEmail();
 Отправляю результат в интерфейс
 .\Task_Generic\pom.xml
 .\Task_Generic\src\main\java\MyList.java
+
+Свой односвязанный список
+-------------------------
+Тип элементов - T
 Новый элемент становится первым
 и ссылается на тот список, который был до операции
 добавления

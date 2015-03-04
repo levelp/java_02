@@ -1,15 +1,25 @@
+import java.util.Random;
+
 // Использование перечислений:
 public class SolarSystemTest {
     public static void main(String[] args) {
-        // 
+        // Присваивать можем только одно из значений enum'а
+        //-->
         SolarSystemPlanet planet = SolarSystemPlanet.EARTH;
 
         needColonization(planet);
+        //<--
 
-        Sex sex = Sex.FEMALE;
-        if(sex == Sex.MALE){
+        //-->
+        Random random = new Random();
 
+        Sex sex = random.nextInt(2) == 0 ? Sex.FEMALE : Sex.MALE;
+        if (sex == Sex.MALE) {
+            System.out.println("Мужской");
+        } else {
+            System.out.println("Женский");
         }
+        //<--
     }
 
     private static boolean needColonization(SolarSystemPlanet planet) {
