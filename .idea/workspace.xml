@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a432e49-66a4-4617-9180-d4496b8837d1" name="Default" comment="Загрузка объекта с помощью Reflection">
-      <change type="MOVED" beforePath="C:\Users\gtee\Desktop\java_02\09_ReflectionTask2\09_ReflectionTask2.iml" afterPath="$PROJECT_DIR$/09_ReflectionTask_SaveLoad/09_ReflectionTask_SaveLoad.iml" />
-      <change type="MOVED" beforePath="C:\Users\gtee\Desktop\java_02\09_ReflectionTask2\pom.xml" afterPath="$PROJECT_DIR$/09_ReflectionTask_SaveLoad/pom.xml" />
-      <change type="MOVED" beforePath="C:\Users\gtee\Desktop\java_02\09_ReflectionTask2\src\main\java\AllCases.java" afterPath="$PROJECT_DIR$/09_ReflectionTask_SaveLoad/src/main/java/AllCases.java" />
-      <change type="MOVED" beforePath="C:\Users\gtee\Desktop\java_02\09_ReflectionTask2\src\main\java\Circle.java" afterPath="$PROJECT_DIR$/09_ReflectionTask_SaveLoad/src/main/java/Circle.java" />
-      <change type="MOVED" beforePath="C:\Users\gtee\Desktop\java_02\09_ReflectionTask2\src\main\java\FileStorage.java" afterPath="$PROJECT_DIR$/09_ReflectionTask_SaveLoad/src/main/java/FileStorage.java" />
-      <change type="MOVED" beforePath="C:\Users\gtee\Desktop\java_02\09_ReflectionTask2\src\main\java\Point.java" afterPath="$PROJECT_DIR$/09_ReflectionTask_SaveLoad/src/main/java/Point.java" />
-      <change type="MOVED" beforePath="C:\Users\gtee\Desktop\java_02\09_ReflectionTask2\src\main\java\Segment.java" afterPath="$PROJECT_DIR$/09_ReflectionTask_SaveLoad/src/main/java/Segment.java" />
-      <change type="MOVED" beforePath="C:\Users\gtee\Desktop\java_02\09_ReflectionTask2\src\test\java\SaveLoadTest.java" afterPath="$PROJECT_DIR$/09_ReflectionTask_SaveLoad/src/test/java/SaveLoadTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="2a432e49-66a4-4617-9180-d4496b8837d1" name="Default" comment="Пути" />
     <ignored path="lesson_02.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/../lesson_03/01_Collections/target/" />
@@ -76,7 +63,7 @@
       <file leaf-file-name="AllCases.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/09_ReflectionTask_SaveLoad/src/main/java/AllCases.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
               <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
               <folding />
             </state>
@@ -823,7 +810,7 @@
       <workItem from="1424983070041" duration="608000" />
       <workItem from="1425401024939" duration="8573000" />
       <workItem from="1425410085314" duration="108000" />
-      <workItem from="1425462307375" duration="2796000" />
+      <workItem from="1425462307375" duration="3424000" />
     </task>
     <task id="LOCAL-00001" summary="Задание на реализацию своей структуры данных используя Generic">
       <created>1415988758078</created>
@@ -867,11 +854,17 @@
       <option name="project" value="LOCAL" />
       <updated>1425407306729</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Пути">
+      <created>1425466153851</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1425466153851</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38732000" />
+    <option name="totallyTimeSpent" value="39360000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -888,7 +881,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.06738281" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27897575" sideWeight="0.855" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27897575" sideWeight="0.855" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -929,7 +922,8 @@
     <MESSAGE value="Swing пример" />
     <MESSAGE value="Задача по Reflection API" />
     <MESSAGE value="Загрузка объекта с помощью Reflection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Загрузка объекта с помощью Reflection" />
+    <MESSAGE value="Пути" />
+    <option name="LAST_COMMIT_MESSAGE" value="Пути" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

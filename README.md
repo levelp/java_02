@@ -46,20 +46,20 @@ Enum - перечисления
 
 
 
-.\00_enum\pom.xml
-.\00_enum\src\main\java\Season.java
+.\00_Enum\pom.xml
+.\00_Enum\src\main\java\Season.java
 Времена года
 ``` java
 enum Season { WINTER, SPRING, SUMMER, AUTUMN }
 ```
-.\00_enum\src\main\java\Sex.java
+.\00_Enum\src\main\java\Sex.java
 Пол: мужской, женский
 ``` java
 public enum Sex {
     MALE, FEMALE
 }
 ```
-.\00_enum\src\main\java\SolarSystemPlanet.java
+.\00_Enum\src\main\java\SolarSystemPlanet.java
 Элементы перечисления - экземпляры enum-класса,
 доступные статически.
 Планеты солнечной системы
@@ -81,7 +81,7 @@ public enum SolarSystemPlanet {
     }
 }
 ```
-.\00_enum\src\test\java\SolarSystemTest.java
+.\00_Enum\src\test\java\SolarSystemTest.java
 Использование перечислений:
 Присваивать можем только одно из значений enum'а
 ``` java
@@ -483,10 +483,10 @@ Object objectA = new A();
             method.invoke(obj);
         }
 ```
-.\09_ReflectionTask2\pom.xml
-.\09_ReflectionTask2\src\main\java\AllCases.java
-.\09_ReflectionTask2\src\main\java\Circle.java
-.\09_ReflectionTask2\src\main\java\FileStorage.java
+.\09_ReflectionTask_SaveLoad\pom.xml
+.\09_ReflectionTask_SaveLoad\src\main\java\AllCases.java
+.\09_ReflectionTask_SaveLoad\src\main\java\Circle.java
+.\09_ReflectionTask_SaveLoad\src\main\java\FileStorage.java
 TODO: реализовать
 Получаем объект-класс того объекта
 который надо сохранить
@@ -536,9 +536,9 @@ field.set(instance, scanner.nextDouble());
                 }
 ```
 null - для статических методов
-.\09_ReflectionTask2\src\main\java\Point.java
-.\09_ReflectionTask2\src\main\java\Segment.java
-.\09_ReflectionTask2\src\test\java\SaveLoadTest.java
+.\09_ReflectionTask_SaveLoad\src\main\java\Point.java
+.\09_ReflectionTask_SaveLoad\src\main\java\Segment.java
+.\09_ReflectionTask_SaveLoad\src\test\java\SaveLoadTest.java
 .\11_Timer\pom.xml
 .\11_Timer\src\main\java\MainForm.java
 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("mm:");
