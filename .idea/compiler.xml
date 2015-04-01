@@ -23,6 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="00_enum" />
+        <module name="00_Enum" />
         <module name="00_HelloWorld" />
         <module name="01_Collections" />
         <module name="01_Memory" />
@@ -45,5 +46,24 @@
         <module name="Task_Generic" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="00_Enum" target="1.5" />
+      <module name="01_Memory" target="1.5" />
+      <module name="02_Boxing" target="1.5" />
+      <module name="02_DataStruct" target="1.5" />
+      <module name="03_Reflection" target="1.5" />
+      <module name="04_Object_Equals_hashCode_toString" target="1.5" />
+      <module name="05_URL" target="1.5" />
+      <module name="06_Shapes" target="1.5" />
+      <module name="07_JUnit_Void" target="1.5" />
+      <module name="08_ReflectionTask" target="1.5" />
+      <module name="09_ReflectionTask_SaveLoad" target="1.5" />
+      <module name="11_Timer" target="1.5" />
+      <module name="98_XORTest" target="1.5" />
+      <module name="java_02" target="1.5" />
+      <module name="Q1" target="1.5" />
+      <module name="SwingDemo" target="1.5" />
+      <module name="Task_Generic" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

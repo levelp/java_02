@@ -10,6 +10,11 @@
     <version>1.0</version>
     <name>Java Junior Developer 2</name>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+    
     <modules>
         <module>00_enum</module>
         <module>01_Memory</module>
@@ -27,6 +32,5 @@
         <module>Q1</module>
         <module>Task_Generic</module>
         <module>SwingDemo</module>
-        <module>JavaFX</module>
     </modules>
 </project>

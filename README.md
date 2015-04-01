@@ -573,7 +573,6 @@ int main(){
 ```
 .\98_XORTest\pom.xml
 .\98_XORTest\src\main\java\Main.java
-.\JavaFX\pom.xml
 .\Q1\pom.xml
 .\Q1\src\main\java\Resume.java
 ...
