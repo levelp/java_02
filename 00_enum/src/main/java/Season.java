@@ -1,4 +1,4 @@
-﻿// Времена года
+// Времена года
 //-->
 enum Season { WINTER, SPRING, SUMMER, AUTUMN }
 //<--

@@ -5,10 +5,17 @@
     <file url="file://$PROJECT_DIR$/00_Enum" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/00_Enum/src/main/java/Season.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/01_Memory" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/02_Boxing" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/02_DataStruct" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/03_Reflection" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/04_Object_Equals_hashCode_toString" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/05_URL" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/06_Shapes" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/07_JUnit_Void" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/08_ReflectionTask" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/09_ReflectionTask_SaveLoad" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/11_Timer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/98_XORTest" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Q1" charset="UTF-8" />
   </component>
 </project>
