@@ -22,14 +22,14 @@ public class MainForm {
     private Date startDate;
 
     public MainForm() {
+        // SimpleDateFormat simpleDateFormat = new SimpleDateFormat("mm:");
+        /**
+         * При нажатии на кнопку Старт
+         * @param e действие
+         */
         стартButton.addActionListener(new ActionListener() {
-            /**
-             * При нажатии на кнопку Старт
-             * @param e
-             */
             @Override
             public void actionPerformed(ActionEvent e) {
-                // SimpleDateFormat simpleDateFormat = new SimpleDateFormat("mm:");
                 timeGo = true;
 
                 startDate = new Date();
@@ -39,19 +39,11 @@ public class MainForm {
                 timer.schedule(new MyTimerTask(this), DELAY);
             }
         });
-        сбросButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                startDate = new Date();
-                updateTime();
-            }
+        сбросButton.addActionListener(e -> {
+            startDate = new Date();
+            updateTime();
         });
-        стопButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                timeGo = false;
-            }
-        });
+        стопButton.addActionListener(e -> timeGo = false);
     }
 
     public static void main(String[] args) {
