@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/00_Enum/00_Enum.iml" filepath="$PROJECT_DIR$/00_Enum/00_Enum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/00_enum/00_enum.iml" filepath="$PROJECT_DIR$/00_enum/00_enum.iml" />
       <module fileurl="file://$PROJECT_DIR$/01_Memory/01_Memory.iml" filepath="$PROJECT_DIR$/01_Memory/01_Memory.iml" />
       <module fileurl="file://$PROJECT_DIR$/02_Boxing/02_Boxing.iml" filepath="$PROJECT_DIR$/02_Boxing/02_Boxing.iml" />
       <module fileurl="file://$PROJECT_DIR$/02_DataStruct/02_DataStruct.iml" filepath="$PROJECT_DIR$/02_DataStruct/02_DataStruct.iml" />

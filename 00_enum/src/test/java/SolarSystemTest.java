@@ -20,6 +20,10 @@ public class SolarSystemTest {
             System.out.println("Женский");
         }
         //<--
+
+        String s = "MALE";
+        Sex sex1 = Sex.valueOf(s);
+        Sex sex2 = Sex.MALE;
     }
 
     private static boolean needColonization(SolarSystemPlanet planet) {

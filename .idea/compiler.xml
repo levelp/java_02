@@ -22,11 +22,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="00_enum" />
         <module name="00_Enum" />
         <module name="00_HelloWorld" />
         <module name="01_Collections" />
-        <module name="01_Memory" />
         <module name="02_Boxing" />
         <module name="02_Boxing (1)" />
         <module name="02_DataStruct" />
@@ -35,19 +33,58 @@
         <module name="03_Reflection (1)" />
         <module name="04_Object_Equals_hashCode_toString" />
         <module name="05_URL" />
-        <module name="06_Shapes" />
-        <module name="07_JUnit_Void" />
         <module name="09_ReflectionTask2" />
         <module name="09_ReflectionTask_SaveLoad" />
         <module name="98_XORTest" />
         <module name="ModifiersDemo" />
-        <module name="Q1" />
-        <module name="SwingDemo" />
         <module name="Task_Generic" />
+      </profile>
+      <profile default="false" name="Annotation profile for Q1" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="Q1" />
+      </profile>
+      <profile default="false" name="Annotation profile for 07_JUnit_Void" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="07_JUnit_Void" />
+      </profile>
+      <profile default="false" name="Annotation profile for SwingDemo" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="SwingDemo" />
+      </profile>
+      <profile default="false" name="Annotation profile for 00_enum" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="00_enum" />
+      </profile>
+      <profile default="false" name="Annotation profile for 06_Shapes" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="06_Shapes" />
+      </profile>
+      <profile default="false" name="Annotation profile for 01_Memory" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="01_Memory" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="00_Enum" target="1.8" />
+      <module name="00_enum" target="1.8" />
       <module name="01_Memory" target="1.8" />
       <module name="02_Boxing" target="1.5" />
       <module name="02_DataStruct" target="1.5" />

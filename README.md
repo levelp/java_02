@@ -1,3 +1,4 @@
+<!-- doc.py -->
 ﻿Типы. Операторы. Объектная модель в Java
 ========================================
 
@@ -46,20 +47,22 @@ Enum - перечисления
 
 
 
-.\00_Enum\pom.xml
-.\00_Enum\src\main\java\Season.java
 Времена года
 ``` java
 enum Season { WINTER, SPRING, SUMMER, AUTUMN }
 ```
-.\00_Enum\src\main\java\Sex.java
+
+[00_enum/src/main/java/Season.java](00_enum/src/main/java/Season.java)
+
 Пол: мужской, женский
 ``` java
 public enum Sex {
     MALE, FEMALE
 }
 ```
-.\00_Enum\src\main\java\SolarSystemPlanet.java
+
+[00_enum/src/main/java/Sex.java](00_enum/src/main/java/Sex.java)
+
 Элементы перечисления - экземпляры enum-класса,
 доступные статически.
 Планеты солнечной системы
@@ -81,7 +84,9 @@ public enum SolarSystemPlanet {
     }
 }
 ```
-.\00_Enum\src\test\java\SolarSystemTest.java
+
+[00_enum/src/main/java/SolarSystemPlanet.java](00_enum/src/main/java/SolarSystemPlanet.java)
+
 Использование перечислений:
 Присваивать можем только одно из значений enum'а
 ``` java
@@ -89,6 +94,7 @@ public enum SolarSystemPlanet {
 
         needColonization(planet);
 ```
+
 ``` java
         Random random = new Random();
 
@@ -99,20 +105,22 @@ public enum SolarSystemPlanet {
             System.out.println("Женский");
         }
 ```
+
+[00_enum/src/test/java/SolarSystemTest.java](00_enum/src/test/java/SolarSystemTest.java)
+
 Память
 ======
 * Статическая
 * Динамическая - **new** / GC.
 * Стек - локальные переменные в функциях и методах.
 
-.\01_Memory\pom.xml
-.\01_Memory\src\main\java\A_Memory.java
 Getting the runtime reference from system
 Заводим массив в динамической памяти
 Пауза в 10 миллисекунд
 Заводии в динамической памяти массив
 Номер массива
-.\01_Memory\src\main\java\Constructors.java
+[01_Memory/src/main/java/A_Memory.java](01_Memory/src/main/java/A_Memory.java)
+
 Конструкторы
 ------------
 Конструктор - метод, который вызывается при созданни объекта.
@@ -150,7 +158,9 @@ public class Constructors {
     }
 }
 ```
-.\01_Memory\src\main\java\DynMemoryClass.java
+
+[01_Memory/src/main/java/Constructors.java](01_Memory/src/main/java/Constructors.java)
+
 Стек. Переполнение стека
 ------------------------
 ``` java
@@ -187,33 +197,33 @@ public class DynMemoryClass {
     }
 }
 ```
-.\01_Memory\src\main\java\StaticConstructor.java
+
+[01_Memory/src/main/java/DynMemoryClass.java](01_Memory/src/main/java/DynMemoryClass.java)
+
 Инициализация выполняется последовательно
 Строчка за строчкой
 Сначала всё со словом static
 Потом инициализация не static переменных
 counter = 0;
-.\02_Boxing\pom.xml
-.\02_Boxing\src\main\java\BoxingDemo.java
+[01_Memory/src/main/java/StaticConstructor.java](01_Memory/src/main/java/StaticConstructor.java)
+
 immutable
-.\02_Boxing\src\main\java\ImmutableDemo.java
-.\02_Boxing\src\main\java\TypesDemo.java
-.\02_Boxing\src\test\java\CountChars.java
+[02_Boxing/src/main/java/BoxingDemo.java](02_Boxing/src/main/java/BoxingDemo.java)
+
 Считать количество цифр
 Считать количество букв
 + Подсчитывать количество букв A,
 B, C... всех символов таблицы UTF-8
-.\02_Boxing\src\test\java\TypesDemoTest.java
+[02_Boxing/src/test/java/CountChars.java](02_Boxing/src/test/java/CountChars.java)
+
 Double.MAX_VALUE;
 Double.MIN_VALUE;
 Double.NaN;
-﻿Generic - создание своего контейнера
-====================================
+[02_Boxing/src/test/java/TypesDemoTest.java](02_Boxing/src/test/java/TypesDemoTest.java)
 
-.\02_DataStruct\pom.xml
-.\02_DataStruct\src\main\java\ArrayListSizeDemo.java
 arrayList.ensureCapacity(100);
-.\02_DataStruct\src\main\java\MyStack.java
+[02_DataStruct/src/main/java/ArrayListSizeDemo.java](02_DataStruct/src/main/java/ArrayListSizeDemo.java)
+
 ``` java
 public class MyStack<T> {
     // Количество элементов
@@ -264,33 +274,16 @@ public class MyStack<T> {
     }
 }
 ```
-.\02_DataStruct\src\main\java\Sort.java
+
+[02_DataStruct/src/main/java/MyStack.java](02_DataStruct/src/main/java/MyStack.java)
+
 Сортировка
 Возвращаем результат
-.\02_DataStruct\src\test\java\SortTest.java
+[02_DataStruct/src/main/java/Sort.java](02_DataStruct/src/main/java/Sort.java)
+
 assertArrayEquals(new String[]);
-.\02_DataStruct\src\test\java\StackTest.java
-Reflection API + использоваение в библиотеках ORM
-=================================================
+[02_DataStruct/src/test/java/SortTest.java](02_DataStruct/src/test/java/SortTest.java)
 
-Аннотации
----------
-
-Объявление аннотации
-``` java
-public @interface AnnotationName {
-}
-```
-
-
-
-.\03_Reflection\pom.xml
-.\03_Reflection\src\main\java\annotations\Show.java
-.\03_Reflection\src\main\java\db\annotations\Autoincrement.java
-.\03_Reflection\src\main\java\db\annotations\Field.java
-.\03_Reflection\src\main\java\db\annotations\MyAnnotation.java
-.\03_Reflection\src\main\java\db\annotations\PrimaryKey.java
-.\03_Reflection\src\main\java\db\dao\SaveToDB.java
 Использование аннотаций
 ``` java
     private static void saveToDB(Object obj) {
@@ -320,24 +313,22 @@ public @interface AnnotationName {
         }
     }
 ```
-.\03_Reflection\src\main\java\db\model\User.java
+
+[03_Reflection/src/main/java/db/dao/SaveToDB.java](03_Reflection/src/main/java/db/dao/SaveToDB.java)
+
 @Field("PASSWORD")
-.\03_Reflection\src\main\java\simple\AnnotationDemo.java
-.\03_Reflection\src\main\java\simple\MyClass.java
-.\03_Reflection\src\test\java\classes\ReflectionTest.java
-.\03_Reflection\src\test\java\classes\ShowClass.java
+[03_Reflection/src/main/java/db/model/User.java](03_Reflection/src/main/java/db/model/User.java)
+
 По объекту получаем класс
 Значение и имя класса
 Получаем класс по имени класса
 Пытаемся создать экземпляр класса
 Выводим экземпляр класса
-.\03_Reflection\src\test\java\fields\ShowAllFields.java
-.\03_Reflection\src\test\java\fields\ShowFieldsWithAnnotation.java
-.\03_Reflection\src\test\java\methods\CallAllMethods.java
+[03_Reflection/src/test/java/classes/ShowClass.java](03_Reflection/src/test/java/classes/ShowClass.java)
+
 Создаю экземпляр класса
-.\04_Object_Equals_hashCode_toString\pom.xml
-.\04_Object_Equals_hashCode_toString\src\main\java\Equals.java
-.\04_Object_Equals_hashCode_toString\src\main\java\ThisLink.java
+[03_Reflection/src/test/java/methods/CallAllMethods.java](03_Reflection/src/test/java/methods/CallAllMethods.java)
+
 
 Использование ссылки this
 -------------------------
@@ -355,6 +346,7 @@ public @interface AnnotationName {
         journal.release("Сентябрь 2014");
         journal.release("Октябрь 2014");
 ```
+
 ``` java
         // Когда журнал выходит
         public void release(String name) {
@@ -364,17 +356,13 @@ public @interface AnnotationName {
             }
         }
 ```
-.\04_Object_Equals_hashCode_toString\src\main\java\geometry\NamedPoint.java
-.\04_Object_Equals_hashCode_toString\src\main\java\geometry\Point.java
+
+[04_Object_Equals_hashCode_toString/src/main/java/ThisLink.java](04_Object_Equals_hashCode_toString/src/main/java/ThisLink.java)
+
 Координаты
 Double.hashCode(y);
-.\04_Object_Equals_hashCode_toString\src\main\java\geometry\PrimaryKey.java
-.\04_Object_Equals_hashCode_toString\src\main\java\geometry\Segment.java
-.\04_Object_Equals_hashCode_toString\src\main\java\geometry\Settings.java
-.\04_Object_Equals_hashCode_toString\src\test\java\HashMapTest.java
-.\04_Object_Equals_hashCode_toString\src\test\java\PointTest.java
-.\05_URL\pom.xml
-.\05_URL\src\test\java\URLTest.java
+[04_Object_Equals_hashCode_toString/src/main/java/geometry/Point.java](04_Object_Equals_hashCode_toString/src/main/java/geometry/Point.java)
+
 Добавляем свой обработчик нестандартных протоколов
 Вывод протокола для отладки:
 System.out.println("protocol = " + protocol);
@@ -382,23 +370,21 @@ System.out.println("protocol = " + protocol);
 Проверяем разбор нестандартного URL
 Разбор стандартных URL по-прежнему работает
 System.out.println(url.getContent());
-.\06_Shapes\pom.xml
-.\06_Shapes\src\main\java\Circle.java
+[05_URL/src/test/java/URLTest.java](05_URL/src/test/java/URLTest.java)
+
 TODO: показать
-.\06_Shapes\src\main\java\Point.java
-.\06_Shapes\src\main\java\Rectangle.java
+[06_Shapes/src/main/java/Circle.java](06_Shapes/src/main/java/Circle.java)
+
 TODO: показать
-.\06_Shapes\src\main\java\Shape.java
-.\06_Shapes\src\main\java\Triangle.java
+[06_Shapes/src/main/java/Rectangle.java](06_Shapes/src/main/java/Rectangle.java)
+
 TODO: показать
-.\06_Shapes\src\test\java\ShapesTest.java
+[06_Shapes/src/main/java/Triangle.java](06_Shapes/src/main/java/Triangle.java)
+
 Треугольник
 assertEquals();
-﻿Тестирование что метод пишет на консоль
----------------------------------------
+[06_Shapes/src/test/java/ShapesTest.java](06_Shapes/src/test/java/ShapesTest.java)
 
-.\07_JUnit_Void\pom.xml
-.\07_JUnit_Void\src\main\java\MyClass.java
 Пусть есть класс, который что-то выводит на консоль
 ``` java
 public class MyClass {
@@ -412,13 +398,16 @@ public class MyClass {
     }
 }
 ```
-.\07_JUnit_Void\src\test\java\MyClassTest.java
+
+[07_JUnit_Void/src/main/java/MyClass.java](07_JUnit_Void/src/main/java/MyClass.java)
+
 И есть тест, который должен проверить что класс выводит на консоль
 Сравнить строку с заданной очень просто
 ``` java
         MyClass myClass = new MyClass();
         assertEquals("SHOW", myClass.getText());
 ```
+
 А для сравнения вывода можно перехватить вывод на консоль
 ``` java
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
@@ -431,12 +420,9 @@ public class MyClass {
         String result = stream.toString();
         assertEquals("SHOW\r\n", result); // Сравниваем
 ```
-.\08_ReflectionTask\pom.xml
-.\08_ReflectionTask\src\main\java\A.java
-.\08_ReflectionTask\src\main\java\B.java
-.\08_ReflectionTask\src\main\java\Calc.java
-.\08_ReflectionTask\src\main\java\Calc2.java
-.\08_ReflectionTask\src\test\java\ATest.java
+
+[07_JUnit_Void/src/test/java/MyClassTest.java](07_JUnit_Void/src/test/java/MyClassTest.java)
+
 Reflection API
 --------------
 ``` java
@@ -457,10 +443,12 @@ Reflection API
             m.invoke(null);
         }
 ```
-.\08_ReflectionTask\src\test\java\CalcTest.java
-.\08_ReflectionTask\src\test\java\CreateInstance.java
+
+[08_ReflectionTask/src/test/java/ATest.java](08_ReflectionTask/src/test/java/ATest.java)
+
 Object objectA = new A();
-.\08_ReflectionTask\src\test\java\Test.java
+[08_ReflectionTask/src/test/java/CreateInstance.java](08_ReflectionTask/src/test/java/CreateInstance.java)
+
 ``` java
         System.out.println("Show class: " + className);
 
@@ -483,10 +471,9 @@ Object objectA = new A();
             method.invoke(obj);
         }
 ```
-.\09_ReflectionTask_SaveLoad\pom.xml
-.\09_ReflectionTask_SaveLoad\src\main\java\AllCases.java
-.\09_ReflectionTask_SaveLoad\src\main\java\Circle.java
-.\09_ReflectionTask_SaveLoad\src\main\java\FileStorage.java
+
+[08_ReflectionTask/src/test/java/Test.java](08_ReflectionTask/src/test/java/Test.java)
+
 TODO: реализовать
 Получаем объект-класс того объекта
 который надо сохранить
@@ -497,6 +484,7 @@ private/protected/package local
 ``` java
             field.setAccessible(true);
 ```
+
 Считываем имя класса
 Создаем класс по имени
 Создаём экземпляр класса
@@ -517,6 +505,7 @@ field.set(instance, scanner.nextDouble());
             if (field.getType().equals(Integer.TYPE))
                 field.set(instance, Integer.valueOf(value));
 ```
+
 Способ 2 - используем Reflection
 Получаем класс-обёртку
 ``` java
@@ -535,21 +524,15 @@ field.set(instance, scanner.nextDouble());
                     System.out.println("fieldClassName = " + fieldClassName);
                 }
 ```
+
 null - для статических методов
-.\09_ReflectionTask_SaveLoad\src\main\java\Point.java
-.\09_ReflectionTask_SaveLoad\src\main\java\Segment.java
-.\09_ReflectionTask_SaveLoad\src\test\java\SaveLoadTest.java
-.\11_Timer\pom.xml
-.\11_Timer\src\main\java\MainForm.java
+[09_ReflectionTask_SaveLoad/src/main/java/FileStorage.java](09_ReflectionTask_SaveLoad/src/main/java/FileStorage.java)
+
 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("mm:");
 Сколько секунд прошло
 System.out.println("inSecond: " + inSeconds);
-.\11_Timer\src\main\java\MyTimerTask.java
-XORTest - Отличия Java от C++
-=============================
+[11_Timer/src/main/java/MainForm.java](11_Timer/src/main/java/MainForm.java)
 
-
-.\98_XORTest\cpp_check.cpp
 ``` cpp
 #include <iostream>
 
@@ -571,23 +554,24 @@ int main(){
   return 0;
 }
 ```
-.\98_XORTest\pom.xml
-.\98_XORTest\src\main\java\Main.java
-.\Q1\pom.xml
-.\Q1\src\main\java\Resume.java
+
+[98_XORTest/cpp_check.cpp](98_XORTest/cpp_check.cpp)
+
 ...
-.\Q1\src\main\java\User.java
+[Q1/src/main/java/Resume.java](Q1/src/main/java/Resume.java)
+
 sendEmail();
-.\Q1\src\test\java\UserTest.java
+[Q1/src/main/java/User.java](Q1/src/main/java/User.java)
+
 Создаём тестового пользователя
 Параметры
-.\SwingDemo\pom.xml
-.\SwingDemo\src\main\java\MainForm.java
+[Q1/src/test/java/UserTest.java](Q1/src/test/java/UserTest.java)
+
 Получаю значения из интерфейса
 Сумма чисел
 Отправляю результат в интерфейс
-.\Task_Generic\pom.xml
-.\Task_Generic\src\main\java\MyList.java
+[SwingDemo/src/main/java/MainForm.java](SwingDemo/src/main/java/MainForm.java)
+
 
 Свой односвязанный список
 -------------------------
@@ -597,9 +581,12 @@ sendEmail();
 добавления
 Новый элемент -> последний
 Новый элемент добавляем в конец списка
-.\Task_Generic\src\test\java\ListTest.java
+[Task_Generic/src/main/java/MyList.java](Task_Generic/src/main/java/MyList.java)
+
 Восстанавливаем вывод на консоль
-.\pom.xml
+[Task_Generic/src/test/java/ListTest.java](Task_Generic/src/test/java/ListTest.java)
+
+
 ﻿Домашнее задание
 ----------------
 * Дополнить классы модели конструкторами, equals, hashCode, toString.
