@@ -43,7 +43,7 @@
 * Intellij Idea
 
 
-http://habrahabr.ru/post/125799/ - Как начать работать с GitHub: быстрый старт
-http://habrahabr.ru/post/147192/ - Изучить Github за 15 минут
-https://try.github.io - интерактивные уроки по Git
+http://habrahabr.ru/post/125799/ - РљР°Рє РЅР°С‡Р°С‚СЊ СЂР°Р±РѕС‚Р°С‚СЊ СЃ GitHub: Р±С‹СЃС‚СЂС‹Р№ СЃС‚Р°СЂС‚
+http://habrahabr.ru/post/147192/ - РР·СѓС‡РёС‚СЊ Github Р·Р° 15 РјРёРЅСѓС‚
+https://try.github.io - РёРЅС‚РµСЂР°РєС‚РёРІРЅС‹Рµ СѓСЂРѕРєРё РїРѕ Git
 
