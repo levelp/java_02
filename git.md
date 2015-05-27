@@ -42,3 +42,8 @@
 * TortoiseGit
 * Intellij Idea
 
+
+http://habrahabr.ru/post/125799/ -  ак начать работать с GitHub: быстрый старт
+http://habrahabr.ru/post/147192/ - »зучить Github за 15 минут
+https://try.github.io - интерактивные уроки по Git
+

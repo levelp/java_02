@@ -7,7 +7,8 @@ git
 
 
 
-Контрольные вопросы по ООП. Кодировка в java. Типы данных.
+Контрольные вопросы по ООП. Кодировка в java. Типы данных
+---------------------------------------------------------
 
 * Операторы
 
@@ -360,6 +361,7 @@ assertArrayEquals(new String[]);
 [04_Object_Equals_hashCode_toString/src/main/java/ThisLink.java](04_Object_Equals_hashCode_toString/src/main/java/ThisLink.java)
 
 Координаты
+http://stackoverflow.com/questions/27581/what-issues-should-be-considered-when-overriding-equals-and-hashcode-in-java
 Double.hashCode(y);
 [04_Object_Equals_hashCode_toString/src/main/java/geometry/Point.java](04_Object_Equals_hashCode_toString/src/main/java/geometry/Point.java)
 
@@ -585,10 +587,4 @@ sendEmail();
 
 Восстанавливаем вывод на консоль
 [Task_Generic/src/test/java/ListTest.java](Task_Generic/src/test/java/ListTest.java)
-
-
-﻿Домашнее задание
-----------------
-* Дополнить классы модели конструкторами, equals, hashCode, toString.
-* Реализовать типы объектной модели через enum.
 

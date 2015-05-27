@@ -30,6 +30,7 @@
 [src/main/java/ThisLink.java](src/main/java/ThisLink.java)
 
 Координаты
+http://stackoverflow.com/questions/27581/what-issues-should-be-considered-when-overriding-equals-and-hashcode-in-java
 Double.hashCode(y);
 [src/main/java/geometry/Point.java](src/main/java/geometry/Point.java)
 
