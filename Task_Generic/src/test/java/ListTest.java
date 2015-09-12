@@ -37,4 +37,14 @@ public class ListTest extends Assert {
 
         myList.show();
     }
+
+    /**
+     * Теперь тот же список с целыми числами
+     */
+    @Test
+    public void testIntegers() {
+        MyList<Integer> myList = new MyList<Integer>();
+        myList.addToBegin(3);
+        myList.addToEnd(4);
+    }
 }

@@ -22,7 +22,7 @@ public class A_Memory {
                 e.printStackTrace();
             }
             // Заводии в динамической памяти массив
-            int[] intArray = new int[100000];
+            int[] intArray = new int[10000000];
             for (int j = 0; j < intArray.length; ++j)
                 intArray[j] = j;
             // Номер массива

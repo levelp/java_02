@@ -23,6 +23,10 @@ public class SolarSystemTest {
 
         String s = "MALE";
         Sex sex1 = Sex.valueOf(s);
+        System.out.println("sex1 = " + sex1);
+        if (sex1 == Sex.MALE) {
+            System.out.println("sex1 = " + sex1);
+        }
         Sex sex2 = Sex.MALE;
     }
 
