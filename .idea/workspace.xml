@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a432e49-66a4-4617-9180-d4496b8837d1" name="Default" comment="UTF-8">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/00_enum/src/test/java/SeasonTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Homework/Homework.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Homework/task.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="2a432e49-66a4-4617-9180-d4496b8837d1" name="Default" comment="12.09.2015">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/00_enum/00_enum.iml" afterPath="$PROJECT_DIR$/00_enum/00_enum.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/00_enum/src/main/java/Season.java" afterPath="$PROJECT_DIR$/00_enum/src/main/java/Season.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/00_enum/src/main/java/Sex.java" afterPath="$PROJECT_DIR$/00_enum/src/main/java/Sex.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/00_enum/src/test/java/SolarSystemTest.java" afterPath="$PROJECT_DIR$/00_enum/src/test/java/SolarSystemTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/01_Memory/src/main/java/A_Memory.java" afterPath="$PROJECT_DIR$/01_Memory/src/main/java/A_Memory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Task_Generic/src/test/java/ListTest.java" afterPath="$PROJECT_DIR$/Task_Generic/src/test/java/ListTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homework/task.md" afterPath="$PROJECT_DIR$/Homework/task.md" />
     </list>
     <ignored path="lesson_02.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -145,8 +135,8 @@
       <file leaf-file-name="task.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Homework/task.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7028689">
-              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.4057377">
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -912,7 +902,7 @@
       <workItem from="1425462307375" duration="3424000" />
       <workItem from="1427930974684" duration="2831000" />
       <workItem from="1432380279867" duration="250000" />
-      <workItem from="1442055481435" duration="1616000" />
+      <workItem from="1442055481435" duration="1784000" />
     </task>
     <task id="LOCAL-00001" summary="Задание на реализацию своей структуры данных используя Generic">
       <created>1415988758078</created>
@@ -962,7 +952,13 @@
       <option name="project" value="LOCAL" />
       <updated>1425466153851</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="12.09.2015">
+      <created>1442057125785</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1442057125785</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -971,7 +967,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44057000" />
+    <option name="totallyTimeSpent" value="44225000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1040" height="744" extended-state="6" />
@@ -1029,7 +1025,8 @@
     <MESSAGE value="Загрузка объекта с помощью Reflection" />
     <MESSAGE value="Пути" />
     <MESSAGE value="UTF-8" />
-    <option name="LAST_COMMIT_MESSAGE" value="UTF-8" />
+    <MESSAGE value="12.09.2015" />
+    <option name="LAST_COMMIT_MESSAGE" value="12.09.2015" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1312,7 +1309,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="1577" column="10" selection-start-line="1577" selection-start-column="10" selection-end-line="1577" selection-end-column="10" />
           <folding>
-            <marker date="1442057095369" expanded="true" signature="82027:82090" placeholder="..." />
+            <marker date="1442057260328" expanded="true" signature="82027:82090" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1448,8 +1445,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Homework/task.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7028689">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.4057377">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding />
         </state>
       </provider>

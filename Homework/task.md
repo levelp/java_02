@@ -16,7 +16,7 @@
  assertEquals(1, stack.pop().intValue());
 ```
 
-Стек: Queue<T>
+Очередь: Queue<T>
 * put добавить в начало очереди
 * get получить из конца очереди и удалить
 * isEmpty() стек пуст?
