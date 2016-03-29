@@ -1,0 +1,4 @@
+отладка - https://ru.wikipedia.org/wiki/Отладка_программы
+git tutorial на русском - http://git-scm.com/book/ru/v1/Введение-О-контроле-версий
+модификаторы видимости - https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html
+еще один git tutorial - http://githowto.com/ru

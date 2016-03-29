@@ -1,0 +1,73 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>java</groupId>
+    <artifactId>java_02</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <name>Java Junior Developer 2</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <modules>
+        <module>00_HomeWork_Done</module>
+        <module>01_enum</module>
+        <module>02_BoxingUnboxing</module>
+        <module>03_Reflection</module>
+        <module>05_Memory</module>
+        <module>05_DataStruct</module>
+        <module>05_Object_Equals_hashCode_toString</module>
+        <module>06_Shapes</module>
+        <module>07_JUnit_Void</module>
+        <module>08_ReflectionTask</module>
+        <module>09_ReflectionTask_SaveLoad</module>
+        <module>10_URL</module>
+        <module>11_Timer</module>
+        <module>15_SwingDemo2</module>
+        <module>98_XORTest</module>
+        <module>Q1</module>
+        <module>Task_Generic</module>
+        <module>SwingDemo</module>
+        <module>04_File</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.1</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
