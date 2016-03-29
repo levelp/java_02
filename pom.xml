@@ -1,0 +1,126 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Группа / Имя_модуля / Версия -->
+    <groupId>java</groupId>
+    <artifactId>java_02</artifactId>
+    <version>1.0</version>
+    <!-- Формат пакета при распространении -->
+    <packaging>pom</packaging>
+    <!-- Имя для отображения на сервере / в консолях -->
+    <name>Java Junior Developer 2</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <myProperty>myValue</myProperty>
+        <firstModule>00_HomeWork_Done</firstModule>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <modules>
+        <module>${firstModule}</module>
+        <module>01_enum</module>
+        <module>01_Exceptions</module>
+        <module>02_StringBuilder</module>
+        <module>02_BoxingUnboxing</module>
+        <module>03_Reflection</module>
+        <module>05_Memory</module>
+        <module>05_DataStruct</module>
+        <module>05_Object_Equals_hashCode_toString</module>
+        <module>06_Shapes</module>
+        <module>07_JUnit_Void</module>
+        <module>08_ReflectionTask</module>
+        <module>09_ReflectionTask_SaveLoad</module>
+        <module>10_URL</module>
+        <module>11_Timer</module>
+        <module>15_SwingDemo2</module>
+        <module>98_XORTest</module>
+        <module>Q1</module>
+        <module>Task_Generic</module>
+        <module>SwingDemo</module>
+        <module>04_File</module>
+    </modules>
+
+    <!-- Зависимости проекта -->
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.11.4</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.13.0</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        
+            <!-- JaCoCo code coverage -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.12</version>
+                <executions>
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals><goal>prepare-agent</goal></goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase>
+                        <goals><goal>report</goal></goals>
+                    </execution>
+                    <execution>
+                        <id>check</id>
+                        <phase>verify</phase>
+                        <goals><goal>check</goal></goals>
+                        <configuration>
+                            <rules>
+                                <rule>
+                                    <element>BUNDLE</element>
+                                    <limits>
+                                        <limit>
+                                            <counter>LINE</counter>
+                                            <value>COVEREDRATIO</value>
+                                            <minimum>1.00</minimum>
+                                        </limit>
+                                    </limits>
+                                </rule>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.2</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>

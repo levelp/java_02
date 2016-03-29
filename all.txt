@@ -1,0 +1,12 @@
+AllCases
+publicInt = 3
+protectedInt = 2
+aByte = 10
+aShort = 111
+aInt = 1213
+aLong = 1225324234
+aFloat = 21432.1
+aDouble = 12345.5678
+aChar = A
+aBoolean = true
+privateInt = 1
