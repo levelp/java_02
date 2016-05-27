@@ -23,7 +23,8 @@ public class Point {
 
     @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass())
+            return false;
         if (!(o instanceof Point))
             return false;
 

@@ -25,6 +25,7 @@ public class ReflectionTest {
         assertEquals("java.lang.String", c.getName());
 
         Class strClass = Class.forName("java.lang.String");
+        // String newStr = new String();
         String newStr = (String) strClass.newInstance();
 
         Set<String> s = new HashSet<String>();
