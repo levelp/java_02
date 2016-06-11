@@ -40,8 +40,8 @@ public class MainForm {
             }
         });
         сбросButton.addActionListener(e -> {
-            startDate = new Date();
-            updateTime();
+            MainForm.this.startDate = new Date();
+            MainForm.this.updateTime();
         });
         стопButton.addActionListener(e -> timeGo = false);
     }

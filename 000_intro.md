@@ -40,7 +40,6 @@ this, super, abstract, instanceof, static
 Соглашения по именованию
 ------------------------
 
-Библи
 
 
 
