@@ -4,11 +4,12 @@ package levelp;
  * Скобочки
  */
 public class Brackets {
-
-
+    /**
+     * Тестирование
+     */
     public static void main(String[] args) {
-        for (int i = 1; i <= 6; i++) {
-            genBrackets(i);
+        for (int N = 1; N <= 6; N++) {
+            genBrackets(N);
         }
     }
 
@@ -21,17 +22,19 @@ public class Brackets {
      */
     static void genBrackets(int N) {
         System.out.println("N = " + N);
-        genBrackets(N, 0, 0, "");
+        genBrackets(N, "", 0, 0);
     }
 
     /**
      * @param N      Сколько всего надо поставить пар скобок
      *               N >= 1
+     * @param result Строчка со скобками
      * @param open   Открывающих скобок поставлено
      * @param close  Закрывающих скобок поставлено
-     * @param result Строчка со скобками
      */
-    static void genBrackets(int N, int open, int close, String result) {
+    static void genBrackets(int N,
+                            String result,
+                            int open, int close) {
         if (N < 1)
             throw new IllegalArgumentException("N >= 1");
         if (open > N)
@@ -42,13 +45,14 @@ public class Brackets {
             System.out.println(result);
             return;
         }
-        // Можем ли поставить открывающую скобку?
+        // Можем ли поставить (дописать в конец)
+        // открывающую скобку?
         if (open < N) {
-            genBrackets(N, open + 1, close, result + "(");
+            genBrackets(N, result + "(", open + 1, close);
         }
         // Можем ли поставить закрывающую скобку?
         if (close < open) { // Открывающих меньше чем закрывающих
-            genBrackets(N, open, close + 1, result + ")");
+            genBrackets(N, result + ")", open, close + 1);
         }
     }
 }

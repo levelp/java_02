@@ -19,6 +19,8 @@ public class CallAllMethods {
             }
             if (method.getParameterTypes().length == 1) {
                 method.invoke(obj, 2);
+                // Вызов статического метода
+                //method.invoke(null, 2);
                 // вызов метода с 3 параметрами
                 //method.invoke(obj, 1, 2, 3);
             } else {

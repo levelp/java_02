@@ -14,6 +14,7 @@ enum Season {
      * @param name Название сезона по-русски
      */
     Season(String name) {
+        System.out.println("Конструктор: " + name);
         this.name = name;
         // Про final
         final int[] intArray = new int[1000];

@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
-//
-// Использование ссылки this
-// -------------------------
+///
+/// Использование ссылки this
+/// -------------------------
 public class ThisLink {
 
     public static void main(String[] args) {

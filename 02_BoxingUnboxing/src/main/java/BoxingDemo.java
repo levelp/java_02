@@ -6,6 +6,8 @@ public class BoxingDemo {
         // Boxing
         int i = 10;
         Integer i2 = i;
+        Integer nullInt = null;
+        int i3 = nullInt; // Unboxing
         intMethod(i);
         intMethod(i2);
 

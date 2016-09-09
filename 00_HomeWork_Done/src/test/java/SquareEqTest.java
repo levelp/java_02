@@ -1,11 +1,15 @@
+import levelp.AnyXException;
+import levelp.SquareEq;
 import org.junit.Test;
+
+import static org.junit.Assert.assertArrayEquals;
 
 /**
  * Тесты для решения квадратного уравнения
  */
 public class SquareEqTest {
 
-    public static final double DELTA = 0.000001;
+    private static final double DELTA = 0.000001;
 
     // Первый (самый простой) тест
     //-->
@@ -16,7 +20,7 @@ public class SquareEqTest {
         // a*x^2 + b*x + c = 0
         assertArrayEquals("x^2 = 0",
                 new double[]{0.0},
-                SquareEq.solve(1.0, 0.0, 0.0), DELTA);
+                SquareEq.solve(1.0, 0.0, 0.0), SquareEq.DELTA);
     }
     //<--
 

@@ -32,6 +32,7 @@ public class ShowAllFields {
                 modifiers = field.getModifiers();
                 if ((modifiers & Modifier.PRIVATE) != 0) {
                     System.out.print("private ");
+                    // Разрешаем доступ к private-полю
                     field.setAccessible(true);
                 }
                 if ((modifiers & Modifier.PUBLIC) != 0)

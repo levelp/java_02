@@ -23,6 +23,8 @@ public class ReflectionTest {
     public void getObjectClass() throws ClassNotFoundException, IllegalAccessException, InstantiationException {
         Class c = "foo".getClass();
         assertEquals("java.lang.String", c.getName());
+        Integer ii = 2;
+        assertEquals("java.lang.Integer", ii.getClass().getName());
 
         Class strClass = Class.forName("java.lang.String");
         // String newStr = new String();

@@ -33,6 +33,17 @@ public class SeasonTest {
                     System.out.println("На улице мокро");
                     break;
             }
+
+            switch (curSeason) {
+                case WINTER:
+                case SPRING:
+
+                    break;
+                case SUMMER:
+                    break;
+                default:
+
+            }
         }
     }
 }
