@@ -4,9 +4,6 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-/**
- * Created by potapov.ov on 16.09.2015.
- */
 public class TestClass {
 
     @Test
@@ -19,7 +16,7 @@ public class TestClass {
         assertEquals(3, stack.pop().intValue());
         assertEquals(2, stack.pop().intValue());
         assertEquals(1, stack.pop().intValue());
-        assertTrue("Стек пуст", stack.isEmpty());
+        assertTrue("РЎС‚РµРє РїСѓСЃС‚", stack.isEmpty());
 
     }
 
@@ -31,7 +28,7 @@ public class TestClass {
         queue.put("world");
         assertEquals("Hello", queue.get());
         assertEquals("world", queue.get());
-        assertTrue("Очередь пуста", queue.isEmpty());
+        assertTrue("РћС‡РµСЂРµРґСЊ РїСѓСЃС‚Р°", queue.isEmpty());
 
     }
 }

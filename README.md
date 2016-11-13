@@ -2,9 +2,19 @@
 ﻿Типы. Операторы. Объектная модель в Java
 ========================================
 
+[![Build Status](https://travis-ci.org/levelp/java_02.svg?branch=master)](https://travis-ci.org/levelp/java_02)
+[![Coverage Status](https://coveralls.io/repos/github/levelp/java_02/badge.svg?branch=master)](https://coveralls.io/github/levelp/java_02?branch=master)
+
+Книги по алгоритмам
+-------------------
+* Кормен Т., Лейзерстон Ч., Ривест Р. Алгоритмы: построение и анализ, Пер. с англ. – М.: МЦНМО, 2000.
+* Кнут Дональд, Искусство программирования (The Art of Computer Programming) - https://ru.wikipedia.org/wiki/%D0%98%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F
+* Шень А. Программирование: теоремы и задачи. http://www.e-academy7.narod.ru/COURSES/PROGRAM/LITERATURA/01shen.PDF
+
+
+
 git
 ---
-
 
 
 Контрольные вопросы по ООП. Кодировка в java. Типы данных
@@ -36,7 +46,6 @@ this, super, abstract, instanceof, static
 Соглашения по именованию
 ------------------------
 
-Библи
 
 
 
@@ -102,7 +111,7 @@ public class AnyXException extends RuntimeException {
         // a*x^2 + b*x + c = 0
         assertArrayEquals("x^2 = 0",
                 new double[]{0.0},
-                SquareEq.solve(1.0, 0.0, 0.0), DELTA);
+                SquareEq.solve(1.0, 0.0, 0.0), SquareEq.DELTA);
     }
 ```
 
@@ -152,11 +161,23 @@ public class AnyXException extends RuntimeException {
 Enum - перечисления
 -------------------
 
-Программируя мы часто сталкиваемся с необходимостью ограничить множество допустимых значений для некоторого типа данных.
-Например, день недели может иметь 7 разных значений, месяц в году - 12, а время года - 4.
-Для решения подобных задач во многих языках программирования со статической типизацией предусмотрен специальный тип данных - перечисление (enum).
+Программируя мы часто сталкиваемся с необходимостью
+ограничить множество допустимых значений для
+некоторого типа данных.
+Например, день недели может иметь 7 разных значений,
+месяц в году - 12, а время года - 4 значения.
+Для решения подобных задач во многих языках
+программирования со статической типизацией
+предусмотрен специальный тип данных - перечисление (enum).
 
-В Java перечисления появилось с версии 1.5.
+В Java перечисления появилось с версии 1.
+
+Когда использовать перечисления?
+--------------------------------
+Использовать если: меняется или может поменяться
+логика работы программы при добавлении новых значений.
+
+
 
 
 
@@ -175,6 +196,7 @@ enum Season {
      * @param name Название сезона по-русски
      */
     Season(String name) {
+        System.out.println("Конструктор: " + name);
         this.name = name;
         // Про final
         final int[] intArray = new int[1000];
@@ -431,6 +453,12 @@ public class DynMemoryClass {
 
 [05_Memory/src/main/java/DynMemoryClass.java](05_Memory/src/main/java/DynMemoryClass.java)
 
+Object, equals, hashCode, toString
+----------------------------------
+
+
+Использование ссылки this
+-------------------------
 ``` java
         // Создаём журнал
         Journal journal = new Journal();
@@ -695,6 +723,10 @@ http://habrahabr.ru/post/147192/ - Изучить Github за 15 минут
 https://try.github.io - интерактивные уроки по Git
 
 
+JVMS
+
+Книга
+
 
 ﻿Домашнее задание:
 -----------------
@@ -728,6 +760,7 @@ public class FileStorage {
 
 Работа над проектом (ядро):
 ---------------------------
+* Договориться о проекте (объединиться в команды по 2-3 человека)
 * Дополнить классы модели конструкторами, equals, hashCode, toString.
 * Реализовать типы объектной модели через enum.
 

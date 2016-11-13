@@ -1,0 +1,2 @@
+Object, equals, hashCode, toString
+----------------------------------

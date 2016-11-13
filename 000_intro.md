@@ -1,6 +1,9 @@
 ﻿Типы. Операторы. Объектная модель в Java
 ========================================
 
+[![Build Status](https://travis-ci.org/levelp/java_02.svg?branch=master)](https://travis-ci.org/levelp/java_02)
+[![Coverage Status](https://coveralls.io/repos/github/levelp/java_02/badge.svg?branch=master)](https://coveralls.io/github/levelp/java_02?branch=master)
+
 Книги по алгоритмам
 -------------------
 * Кормен Т., Лейзерстон Ч., Ривест Р. Алгоритмы: построение и анализ, Пер. с англ. – М.: МЦНМО, 2000. 
