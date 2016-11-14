@@ -54,6 +54,8 @@ public class StackTest {
     public void pushPopSequenceStrings() {
         MyStack<String> myStack = new MyStack<>();
         myStack.push("AA");
+        assertEquals(1, myStack.numberOfElements);
+        assertEquals("AA", myStack.data[0]);
         assertEquals("AA", myStack.pop());
 
         myStack.push("BB");

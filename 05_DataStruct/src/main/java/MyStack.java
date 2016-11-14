@@ -43,7 +43,7 @@ public class MyStack<T> {
      */
     @SuppressWarnings("unchecked")
     public T pop() {
-        T value = (T) data[data.length - 1];
+        T value = (T) data[numberOfElements - 1];
         numberOfElements--;
         if (numberOfElements * 2 < data.length) {
             Object[] newData = new Object[data.length - 1];
