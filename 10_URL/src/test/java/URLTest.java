@@ -1,5 +1,3 @@
-import com.sun.deploy.net.protocol.chrome.ChromeURLConnection;
-import com.sun.deploy.net.protocol.chrome.Handler;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -39,12 +37,27 @@ public class URLTest extends Assert {
             // System.out.println("protocol = " + protocol);
             // Для протокола chrome://
             if (protocol.equals("chrome")) {
-                return new Handler();
+                return new URLStreamHandler() {
+                    @Override
+                    protected URLConnection openConnection(URL url) throws IOException {
+                        return new URLConnection(url) {
+                            @Override
+                            public void connect() throws IOException {
+                                System.out.println("URLTest.connect");
+                            }
+                        };
+                    }
+                };
             } else if (protocol.equals("my")) {
                 return new URLStreamHandler() {
                     @Override
                     protected URLConnection openConnection(URL url) throws IOException {
-                        return new ChromeURLConnection(url);
+                        return new URLConnection(url) {
+                            @Override
+                            public void connect() throws IOException {
+                                System.out.println("URLTest.connect");
+                            }
+                        };
                     }
                 };
             }
