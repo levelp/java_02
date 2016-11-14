@@ -25,7 +25,7 @@ public class ListTest extends Assert {
         stream.close();
         // Восстанавливаем вывод на консоль
         System.setOut(saveOut);
-        assertEquals("Test\r\n", stream.toString());
+        assertEquals(String.format("Test%n"), stream.toString());
 
         myList.addToEnd("Элемент_в_конце");
         assertEquals("Элемент_в_конце", myList.root.next.value);
@@ -40,8 +40,24 @@ public class ListTest extends Assert {
      */
     @Test
     public void testIntegers() {
-        MyList<Integer> myList = new MyList<Integer>();
+        MyList<Integer> myList = new MyList<>();
+
         myList.addToBegin(3);
+        assertEquals(1, myList.size());
+        assertEquals(3, myList.root.value.intValue());
+        assertNull(myList.root.next);
+
         myList.addToEnd(4);
+        assertEquals(2, myList.size());
+        assertEquals(3, myList.root.value.intValue());
+        assertEquals(4, myList.root.next.value.intValue());
+        assertNull(myList.root.next.next);
+
+        myList.addToBegin(2);
+        assertEquals(3, myList.size());
+        assertEquals(2, myList.root.value.intValue());
+        assertEquals(3, myList.root.next.value.intValue());
+        assertEquals(4, myList.root.next.next.value.intValue());
+        assertNull(myList.root.next.next.next);
     }
 }
