@@ -27,8 +27,8 @@ public class MyClassTest {
             //
             System.setOut(save);
 
-            String result = stream.toString();
-            assertEquals("SHOW\r\n", result); // Сравниваем
+            String result = stream.toString().trim();
+            assertEquals("SHOW", result); // Сравниваем
         }
         //<--
     }
