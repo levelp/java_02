@@ -2,6 +2,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.*;
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -15,11 +16,13 @@ public class SaveLoadTest extends Assert {
      */
     @Test
     public void testSaveLoad() throws Exception {
+        Locale.setDefault(Locale.ENGLISH);
         File file = new File("data.txt");
         try (PrintStream ps = new PrintStream(
                 new FileOutputStream(file), true, "UTF-8")) {
             ps.println(S);
             ps.println(2 * 2);
+            ps.println(2.54);
         }
         // Чтение из файла
         try (Scanner scanner = new Scanner(
