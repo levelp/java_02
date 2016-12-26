@@ -1,6 +1,5 @@
-/**
- * Точка
- */
+/// Точка
+//-->
 public class Point extends Shape {
     private double x, y;
 
@@ -19,3 +18,4 @@ public class Point extends Shape {
         return name + " (" + x + "; " + y + ")";
     }
 }
+//<--

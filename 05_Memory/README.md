@@ -1,15 +1,24 @@
 <!-- doc.py -->
-Память
-======
+Память (виды памяти)
+--------------------
 * Статическая
 * Динамическая - **new** / GC.
 * Стек - локальные переменные в функциях и методах.
 
-Getting the runtime reference from system
-Заводим массив в динамической памяти
-Пауза в 10 миллисекунд
-Заводии в динамической памяти массив
+Даём "совет" сборщику мусора выполнить сборку
+Количество частей
+Одна часть в байтах
+Сохранять ли ссылки на выделяемые куски памяти
+runtime - объект для обращения к JVM
+Заводим массив в динамической памяти для хранения ссылок
+Заводим в динамической памяти массив
+Заполняем его значениями
 Номер массива
+if (saveReferences) {
+allRefs[i] = intArray;
+}
+Пауза в 10 миллисекунд
+pause();
 [src/main/java/A_Memory.java](src/main/java/A_Memory.java)
 
 Конструкторы
@@ -70,6 +79,8 @@ public class DynMemoryClass {
     }
 
     private static void rec(int i) {
+        int i1 = 10, i2 = 11, i3 = 12, i4 = 14;
+        double d1, d2, d3, d4, d5, d6, d7, d8, d9;
         double d = 10; // Стек
         // Ссылка myClass - в стеке
         // А см объект MyClass - в куче
@@ -90,6 +101,10 @@ public class DynMemoryClass {
 ```
 
 [src/main/java/DynMemoryClass.java](src/main/java/DynMemoryClass.java)
+
+Блок инициализации (выполняется перед
+конструктором)
+[src/main/java/InitOrderPuzzle.java](src/main/java/InitOrderPuzzle.java)
 
 Инициализация выполняется последовательно
 Строчка за строчкой

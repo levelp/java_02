@@ -1,21 +1,10 @@
 <!-- doc.py -->
-﻿Типы. Операторы. Объектная модель в Java
-========================================
-
+﻿
 [![Build Status](https://travis-ci.org/levelp/java_02.svg?branch=master)](https://travis-ci.org/levelp/java_02)
 [![Coverage Status](https://coveralls.io/repos/github/levelp/java_02/badge.svg?branch=master)](https://coveralls.io/github/levelp/java_02?branch=master)
 
-Книги по алгоритмам
--------------------
-* Кормен Т., Лейзерстон Ч., Ривест Р. Алгоритмы: построение и анализ, Пер. с англ. – М.: МЦНМО, 2000.
-* Кнут Дональд, Искусство программирования (The Art of Computer Programming) - https://ru.wikipedia.org/wiki/%D0%98%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F
-* Шень А. Программирование: теоремы и задачи. http://www.e-academy7.narod.ru/COURSES/PROGRAM/LITERATURA/01shen.PDF
-
-
-
-git
----
-
+Типы. Операторы. Объектная модель в Java
+========================================
 
 Контрольные вопросы по ООП. Кодировка в java. Типы данных
 ---------------------------------------------------------
@@ -28,28 +17,44 @@ git
 **Динамическое распределение памяти** - способ выделения оперативной памяти компьютера для объектов в программе,
 при котором выделение памяти под объект осуществляется во время выполнения программы.
 
-Параметры методов. Преобразование типов. Boxing
------------------------------------------------
 
-Пакеты. import. Модификаторы доступа. Область видимости
--------------------------------------------------------
+Итак, память процесса различается на heap (куча) и non-heap (стек) память, и состоит из 5 областей (memory pools, memory spaces):
 
-Object, equals, hashCode, toString
-----------------------------------
-
-Класс Class. Конструктор. Инициализация
----------------------------------------
+* **Eden Space** (heap) – в этой области выделятся память под все создаваемые из программы объекты.
+Большая часть объектов живет недолго (итераторы, временные объекты, используемые внутри методов и т.п.),
+и удаляются при выполнении сборок мусора это области памяти, не перемещаются в другие области памяти.
+Когда данная область заполняется (т.е. количество выделенной памяти в этой области превышает некоторый заданный процент),
+GC выполняет быструю (minor collection) сборку мусора.
+По сравнению с полной сборкой мусора она занимает мало времени, и затрагивает только эту область памяти
+- очищает от устаревших объектов Eden Space и перемещает выжившие объекты в следующую область.
+* **Survivor Space** (heap) – сюда перемещаются объекты из предыдущей, после того,
+как они пережили хотя бы одну сборку мусора.
+Время от времени долгоживущие объекты из этой области перемещаются в Tenured Space.
+* **Tenured (Old) Generation** (heap) - Здесь скапливаются долгоживущие объекты
+(крупные высокоуровневые объекты, синглтоны, менеджеры ресурсов и проч.).
+Когда заполняется эта область, выполняется полная сборка мусора (full, major collection),
+которая обрабатывает все созданные JVM объекты.
+* **Permanent Generation** (non-heap) – Здесь хранится метаинформация, используемая JVM (используемые классы, методы и т.п.)
+* **Code Cache (non-heap)** - эта область используется JVM,
+когда включена JIT-компиляция, в ней кешируется скомпилированный платформенно — зависимый код.
 
 this, super, abstract, instanceof, static
 -----------------------------------------
 
 Соглашения по именованию
 ------------------------
+Классы/Интерфейсы - CamelCase -
+http://iprg.ru/forum/index.php?topic=367.0
 
 
 
-
-
+Исключения в Java
+----------------
+Бывают двух видов:
+* Наследники от класса **Exception**
+надо указывать throws в цепочке вызовов.
+* Наследники от класса **RuntimeException**
+не надо указывать throws.
 ``` java
 // Любое значение X
 public class AnyXException extends RuntimeException {
@@ -58,6 +63,19 @@ public class AnyXException extends RuntimeException {
 
 [00_HomeWork_Done/src/main/java/levelp/AnyXException.java](00_HomeWork_Done/src/main/java/levelp/AnyXException.java)
 
+Если все скобки уже поставлены
+Можем ли поставить (дописать в конец)
+открывающую скобку?
+Можем ли поставить закрывающую скобку?
+[00_HomeWork_Done/src/main/java/levelp/Brackets.java](00_HomeWork_Done/src/main/java/levelp/Brackets.java)
+
+Если сумма кончилась
+x - очередное слагаемое
+Записываем очередное слагаемое
+Вызываем рекурсивно себя изменяя параметры
+[00_HomeWork_Done/src/main/java/levelp/Decomposition.java](00_HomeWork_Done/src/main/java/levelp/Decomposition.java)
+
+Практика: Решение квадратного уравнения
 ``` java
     // Точность вычислений
     public static final double DELTA = 0.000000001;
@@ -103,6 +121,7 @@ public class AnyXException extends RuntimeException {
 
 [00_HomeWork_Done/src/main/java/levelp/SquareEq.java](00_HomeWork_Done/src/main/java/levelp/SquareEq.java)
 
+Первый (самый простой) тест
 ``` java
     @Test
     public void testSimple() {
@@ -115,6 +134,7 @@ public class AnyXException extends RuntimeException {
     }
 ```
 
+Рассматриваем случай, когда два решения уравнения
 ``` java
     @Test
     public void twoSolutions() {
@@ -138,6 +158,7 @@ public class AnyXException extends RuntimeException {
     }
 ```
 
+Тестируем вырожденный случай: a = 0, b = 0
 ``` java
     @Test
     public void zeroAZeroB() {
@@ -147,6 +168,8 @@ public class AnyXException extends RuntimeException {
     }
 ```
 
+Вырожденный случай: a = 0, b = 0, c = 0
+Ожидаемое исключение
 ``` java
     @Test(expected = AnyXException.class)
     public void zeroAZeroBZeroC() {
@@ -157,6 +180,47 @@ public class AnyXException extends RuntimeException {
 ```
 
 [00_HomeWork_Done/src/test/java/SquareEqTest.java](00_HomeWork_Done/src/test/java/SquareEqTest.java)
+
+Операторы и структура кода. Исключения
+--------------------------------------
+
+* RuntimeException
+* Exception
+
+System.setOut(new PrintStream("my.log"));
+throw new MyRuntimeException("xx", 2, 1);
+[01_Exceptions/src/main/java/ExceptionDemo.java](01_Exceptions/src/main/java/ExceptionDemo.java)
+
+Объявление своего класса-исключения
+``` java
+public class MyException extends Exception {
+    // Могут быть поля-значения
+    final double d;
+    final String name;
+    final int i;
+
+    // Конструктор
+    public MyException(String name, int i, double d) {
+        super();
+        this.name = name;
+        this.i = i;
+        this.d = d;
+    }
+}
+```
+
+[01_Exceptions/src/main/java/MyException.java](01_Exceptions/src/main/java/MyException.java)
+
+java.lang.ArithmeticException: / by zero
+[01_Exceptions/src/test/java/DivideByZero.java](01_Exceptions/src/test/java/DivideByZero.java)
+
+....
+...
+throw ex;
+ex.printStackTrace();
+....
+...
+[01_Exceptions/src/test/java/Exceptions.java](01_Exceptions/src/test/java/Exceptions.java)
 
 Enum - перечисления
 -------------------
@@ -172,8 +236,8 @@ Enum - перечисления
 
 В Java перечисления появилось с версии 1.
 
-Когда использовать перечисления?
---------------------------------
+**Когда использовать перечисления?**
+
 Использовать если: меняется или может поменяться
 логика работы программы при добавлении новых значений.
 
@@ -181,6 +245,11 @@ Enum - перечисления
 
 
 
+case NEW_DAY:
+System.out.println("!!! Новое поведение !!!");
+[01_enum/src/main/java/EnumSwitch.java](01_enum/src/main/java/EnumSwitch.java)
+
+Времена года
 ``` java
 enum Season {
     WINTER("Зима"),
@@ -212,6 +281,7 @@ enum Season {
 
 [01_enum/src/main/java/Season.java](01_enum/src/main/java/Season.java)
 
+Пол: мужской, женский
 ``` java
 public enum Sex {
     // 0 1 2
@@ -234,6 +304,9 @@ public enum Sex {
 
 [01_enum/src/main/java/Sex.java](01_enum/src/main/java/Sex.java)
 
+Элементы перечисления - экземпляры enum-класса,
+доступные статически.
+Планеты солнечной системы
 ``` java
 public enum SolarSystemPlanet {
     EARTH("Земля"),
@@ -255,6 +328,8 @@ public enum SolarSystemPlanet {
 
 [01_enum/src/main/java/SolarSystemPlanet.java](01_enum/src/main/java/SolarSystemPlanet.java)
 
+Использование перечислений:
+Присваивать можем только одно из значений enum'а
 ``` java
         SolarSystemPlanet planet = SolarSystemPlanet.EARTH;
 
@@ -274,6 +349,77 @@ public enum SolarSystemPlanet {
 
 [01_enum/src/test/java/SolarSystemTest.java](01_enum/src/test/java/SolarSystemTest.java)
 
+Параметры методов. Преобразование типов. Boxing, Unboxing
+---------------------------------------------------------
+Boxing
+Unboxing
+immutable
+[02_BoxingUnboxing/src/main/java/BoxingDemo.java](02_BoxingUnboxing/src/main/java/BoxingDemo.java)
+
+Считать количество цифр
+Считать количество букв
++ Подсчитывать количество букв A,
+B, C... всех символов таблицы UTF-8
+[02_BoxingUnboxing/src/test/java/CountChars.java](02_BoxingUnboxing/src/test/java/CountChars.java)
+
+Маленькие хитрости Java. StringBuilder
+--------------------------------------
+Тест производительности.
+Демонстрация работы методов StringBuilder: append, insert, delete
+``` java
+        StringBuilder s = new StringBuilder();
+
+        s.append("boolean: ");
+        s.append(true);
+        System.out.println(s);
+        assertEquals("boolean: true", s.toString());
+
+        s.append("  double: ");
+        s.append(1.0);
+        System.out.println(s);
+        assertEquals("boolean: true  double: 1.0", s.toString());
+
+        // Вставляем подстроку в позицию 13
+        s.insert(13, ",");
+        System.out.println(s);
+        assertEquals("boolean: true,  double: 1.0", s.toString());
+
+        // Удаляем кусок
+        s.delete(0, 9);
+        System.out.println(s);
+        assertEquals("true,  double: 1.0", s.toString());
+
+        s = new StringBuilder();
+
+        // Цепочка действий
+        s.append("boolean: ")
+                .append(true)
+                .append(" double: ")
+                .append(1.2)
+                .insert(13, ",");
+        System.out.println(s);
+        assertEquals("boolean: true, double: 1.2", s.toString());
+
+        s.append("  "); // Отступ
+        Point point = new Point(2, 3);
+        s.append(point);
+        assertEquals("boolean: true, double: 1.2  Point{x=2.0, y=3.0}", s.toString());
+```
+
+[02_StringBuilder/src/test/java/StringBuilderTest.java](02_StringBuilder/src/test/java/StringBuilderTest.java)
+
+Результат для строки
+Результат для StringBuilder
+Результат для StringBuffer
+@Ignore
+Runtime.getRuntime().gc();
+Runtime.getRuntime().gc();
+[02_StringBuilder/src/test/java/StringVsStringBuilder.java](02_StringBuilder/src/test/java/StringVsStringBuilder.java)
+
+File f1 = new File(STRING_FILENAME);
+[02_StringBuilder/src/test/java/StringsTest.java](02_StringBuilder/src/test/java/StringsTest.java)
+
+Использование аннотаций
 ``` java
     private static void saveToDB(Object obj) {
         Class c = obj.getClass();
@@ -304,6 +450,78 @@ public enum SolarSystemPlanet {
 ```
 
 [03_Reflection/src/main/java/db/dao/SaveToDB.java](03_Reflection/src/main/java/db/dao/SaveToDB.java)
+
+@Field("PASSWORD")
+[03_Reflection/src/main/java/db/model/User.java](03_Reflection/src/main/java/db/model/User.java)
+
+String s;
+System.out.println("s = " + s);
+[03_Reflection/src/main/java/simple/MyClass.java](03_Reflection/src/main/java/simple/MyClass.java)
+
+String newStr = new String();
+Создание нового экзепляра
+[I
+Загрузка класса
+Создаём экземпляр класса
+double[] obj = (double[]) cDoubleArray.newInstance();
+Object string = cStringArray.newInstance();
+[03_Reflection/src/test/java/classes/ReflectionTest.java](03_Reflection/src/test/java/classes/ReflectionTest.java)
+
+По объекту получаем класс
+Значение и имя класса
+Получаем класс по имени класса
+Пытаемся создать экземпляр класса
+Выводим экземпляр класса
+[03_Reflection/src/test/java/classes/ShowClass.java](03_Reflection/src/test/java/classes/ShowClass.java)
+
+Получаем метаинформацию о классе
+Получаем все поля объявленные в классе
+кроме унаследованных
+Разрешаем доступ к private-полю
+field.set(obj, newValue);
+[03_Reflection/src/test/java/fields/ShowAllFields.java](03_Reflection/src/test/java/fields/ShowAllFields.java)
+
+Создаю экземпляр класса
+Вызов статического метода
+method.invoke(null, 2);
+вызов метода с 3 параметрами
+method.invoke(obj, 1, 2, 3);
+Создаю экземпляр класса
+Вызов статического метода
+method.invoke(null, 2);
+вызов метода с 3 параметрами
+method.invoke(obj, 1, 2, 3);
+[03_Reflection/src/test/java/methods/CallAllMethods.java](03_Reflection/src/test/java/methods/CallAllMethods.java)
+
+Чтение из файла
+[04_File/src/test/java/SaveLoadTest.java](04_File/src/test/java/SaveLoadTest.java)
+
+try{
+//...
+} catch (Exception ex){
+out.close();
+}
+Point newPoint = new Point();
+Получаем название класса
+Получаем метаданные класса
+JVM его загружает если ещё не загрузила
++ возвращает метаданные
+Создаем экземпляр класса
+Считываем значения всех полей класса
+Включаем доступ к не-public полям
+out.println(field.get(object).toString());
+newPoint.x = in.nextDouble();
+newPoint.y = in.nextDouble();
+Получаем метаданные класса
+В первой строчке название класса
+Выводим значения всех полей
+Включаем доступ к не-public полям
+out.println(point.x);
+out.println(point.y);
+[04_File/src/test/java/TextFileSaveLoad.java](04_File/src/test/java/TextFileSaveLoad.java)
+
+arrayList.ensureCapacity(100);
+[05_DataStruct/src/main/java/ArrayListSizeDemo.java](05_DataStruct/src/main/java/ArrayListSizeDemo.java)
 
 ``` java
 public class MyStack<T> {
@@ -346,7 +564,7 @@ public class MyStack<T> {
      */
     @SuppressWarnings("unchecked")
     public T pop() {
-        T value = (T) data[data.length - 1];
+        T value = (T) data[numberOfElements - 1];
         numberOfElements--;
         if (numberOfElements * 2 < data.length) {
             Object[] newData = new Object[data.length - 1];
@@ -360,23 +578,35 @@ public class MyStack<T> {
 
 [05_DataStruct/src/main/java/MyStack.java](05_DataStruct/src/main/java/MyStack.java)
 
-Память
-======
+Сортировка
+Возвращаем результат
+[05_DataStruct/src/main/java/Sort.java](05_DataStruct/src/main/java/Sort.java)
+
+Память (виды памяти)
+--------------------
 * Статическая
 * Динамическая - **new** / GC.
 * Стек - локальные переменные в функциях и методах.
 
-Опции JVM для настройки размера памяти:
----------------------------------------
-* -Xmnsize - initial and maximum size (in bytes) of the heap for the young generation (nursery)
-* -Xmssize - размер кучи (heap)
-* -Xsssize - размер стека для потока
-* -Xmx8G - размер памяти, которую можно использовать JVM (всего)
+Даём "совет" сборщику мусора выполнить сборку
+Количество частей
+Одна часть в байтах
+Сохранять ли ссылки на выделяемые куски памяти
+runtime - объект для обращения к JVM
+Заводим массив в динамической памяти для хранения ссылок
+Заводим в динамической памяти массив
+Заполняем его значениями
+Номер массива
+if (saveReferences) {
+allRefs[i] = intArray;
+}
+Пауза в 10 миллисекунд
+pause();
+[05_Memory/src/main/java/A_Memory.java](05_Memory/src/main/java/A_Memory.java)
 
-256 мегабайт в разных единицах: -Xmn256m -Xmn262144k -Xmn268435456
-
-Составить строчку с настройками Java-машины: http://jvmmemory.com/
-
+Конструкторы
+------------
+Конструктор - метод, который вызывается при созданни объекта.
 ``` java
 public class Constructors {
 
@@ -414,6 +644,8 @@ public class Constructors {
 
 [05_Memory/src/main/java/Constructors.java](05_Memory/src/main/java/Constructors.java)
 
+Стек. Переполнение стека
+------------------------
 ``` java
 public class DynMemoryClass {
 
@@ -453,8 +685,17 @@ public class DynMemoryClass {
 
 [05_Memory/src/main/java/DynMemoryClass.java](05_Memory/src/main/java/DynMemoryClass.java)
 
-Object, equals, hashCode, toString
-----------------------------------
+Блок инициализации (выполняется перед
+конструктором)
+[05_Memory/src/main/java/InitOrderPuzzle.java](05_Memory/src/main/java/InitOrderPuzzle.java)
+
+Инициализация выполняется последовательно
+Строчка за строчкой
+Сначала всё со словом static
+Потом инициализация не static переменных
+counter = 0;
+[05_Memory/src/main/java/StaticConstructor.java](05_Memory/src/main/java/StaticConstructor.java)
+
 
 
 Использование ссылки this
@@ -486,6 +727,135 @@ Object, equals, hashCode, toString
 
 [05_Object_Equals_hashCode_toString/src/main/java/ThisLink.java](05_Object_Equals_hashCode_toString/src/main/java/ThisLink.java)
 
+Object, toString. Сравнение объектов: equals, hashCode. Контракт между equals и hashCode
+----------------------------------------------------------------------------------------
+o1.equals(o2) == true  =>  o1.hashCode() == o2.hashCode()
+Точка
+Координаты
+При вычислении hashCode должны участвовать те же поля что и в equals
+http://stackoverflow.com/questions/27581/what-issues-should-be-considered-when-overriding-equals-and-hashcode-in-java
+Wrong: return 1;
+[05_Object_Equals_hashCode_toString/src/main/java/geometry/Point.java](05_Object_Equals_hashCode_toString/src/main/java/geometry/Point.java)
+
+Круг
+``` java
+public class Circle extends Shape {
+    public Circle(String name, double radius) {
+        super(name);
+    }
+
+    @Override
+    void show() {
+        // TODO: показать
+    }
+}
+```
+
+[06_Shapes/src/main/java/Circle.java](06_Shapes/src/main/java/Circle.java)
+
+Точка
+``` java
+public class Point extends Shape {
+    private double x, y;
+
+    public Point(String name, double x, double y) {
+        super(name);
+        this.x = x;
+        this.y = y;
+    }
+
+    @Override
+    void show() {
+        System.out.println(toString());
+    }
+
+    public String toString() {
+        return name + " (" + x + "; " + y + ")";
+    }
+}
+```
+
+[06_Shapes/src/main/java/Point.java](06_Shapes/src/main/java/Point.java)
+
+Прямоугольник
+``` java
+public class Rectangle extends Shape {
+    public Rectangle(String name, Point leftTop, Point rightBottom) {
+        super(name);
+    }
+
+    @Override
+    void show() {
+       // TODO: показать
+    }
+}
+```
+
+[06_Shapes/src/main/java/Rectangle.java](06_Shapes/src/main/java/Rectangle.java)
+
+Фигура
+``` java
+public abstract class Shape {
+    protected final String name;
+
+    public Shape(String name) {
+        this.name = name;
+    }
+
+    /**
+     * Имя фигуры и все параметры
+     */
+    abstract void show();
+}
+```
+
+[06_Shapes/src/main/java/Shape.java](06_Shapes/src/main/java/Shape.java)
+
+Треугольник
+``` java
+public class Triangle extends Shape {
+    public Triangle(String name, Point p1, Point p2, Point p3) {
+        super(name);
+    }
+
+    @Override
+    void show() {
+        // TODO: показать
+    }
+}
+```
+
+[06_Shapes/src/main/java/Triangle.java](06_Shapes/src/main/java/Triangle.java)
+
+Тестирование работы с нескольникими фигурами
+``` java
+        // Треугольник
+        Triangle triangle = new Triangle("Треугольник 1",
+                new Point("A", 1, 2),
+                new Point("B", 4, 5),
+                new Point("C", 6, 7)
+        );
+
+        Shape[] shapes = {
+                triangle,
+                new Point("Просто точка", 1, 2),
+                new Rectangle("Прямоугольник",
+                        new Point("Левый верхний угол", 10, 20),
+                        new Point("Правый нижний угол", 100, 230)
+                ),
+        };
+
+        for (Shape shape : shapes) {
+            shape.show();
+        }
+        // assertEquals();
+```
+
+[06_Shapes/src/test/java/ShapesTest.java](06_Shapes/src/test/java/ShapesTest.java)
+
+Тестирование что метод пишет на консоль
+---------------------------------------
+Пусть есть класс, который что-то выводит на консоль
 ``` java
 public class MyClass {
 
@@ -501,11 +871,14 @@ public class MyClass {
 
 [07_JUnit_Void/src/main/java/MyClass.java](07_JUnit_Void/src/main/java/MyClass.java)
 
+И есть тест, который должен проверить что класс выводит на консоль
+Сравнить строку с заданной очень просто
 ``` java
         MyClass myClass = new MyClass();
         assertEquals("SHOW", myClass.getText());
 ```
 
+А для сравнения вывода можно перехватить вывод на консоль
 ``` java
         try (ByteArrayOutputStream stream = new ByteArrayOutputStream()) {
             PrintStream save = System.out;
@@ -515,13 +888,15 @@ public class MyClass {
             //
             System.setOut(save);
 
-            String result = stream.toString();
-            assertEquals("SHOW\r\n", result); // Сравниваем
+            String result = stream.toString().trim();
+            assertEquals("SHOW", result); // Сравниваем
         }
 ```
 
 [07_JUnit_Void/src/test/java/MyClassTest.java](07_JUnit_Void/src/test/java/MyClassTest.java)
 
+Reflection API
+--------------
 ``` java
         // Загружаем класс A
         Class cls = Class.forName("A");
@@ -542,6 +917,9 @@ public class MyClass {
 ```
 
 [08_ReflectionTask/src/test/java/ATest.java](08_ReflectionTask/src/test/java/ATest.java)
+
+Object objectA = new A();
+[08_ReflectionTask/src/test/java/CreateInstance.java](08_ReflectionTask/src/test/java/CreateInstance.java)
 
 ``` java
         System.out.println("Show class: " + className);
@@ -568,10 +946,31 @@ public class MyClass {
 
 [08_ReflectionTask/src/test/java/Test.java](08_ReflectionTask/src/test/java/Test.java)
 
+TODO: реализовать
+Получаем объект-класс того объекта
+который надо сохранить
+Печатаем имя класса в файл
+Сохраняем все поля: c.getDeclaredFields()
+Получаем доступ к
+private/protected/package local
 ``` java
             field.setAccessible(true);
 ```
 
+Считываем имя класса
+Создаем класс по имени
+Создаём экземпляр класса
+Инициализируем поля
+Считываем строчку
+scanner.next() читает символы
+до разделителя (табуляции, пробела,
+перевода строки)
+if (field.getType().equals(Double.TYPE)) {
+field.set(instance, scanner.nextDouble());
+}
+**Как присвоить значение полю произвольного типа?**
+
+Способ 1 - "много if":
 ``` java
             if (field.getType().equals(Double.TYPE))
                 field.set(instance, Double.valueOf(value));
@@ -579,6 +978,8 @@ public class MyClass {
                 field.set(instance, Integer.valueOf(value));
 ```
 
+Способ 2 - используем Reflection
+Получаем класс-обёртку
 ``` java
                 String typeName = field.getType().getName();
                 System.out.println("typeName = " + typeName);
@@ -598,14 +999,51 @@ public class MyClass {
                 }
 ```
 
+null - для статических методов
 [09_ReflectionTask_SaveLoad/src/main/java/FileStorage.java](09_ReflectionTask_SaveLoad/src/main/java/FileStorage.java)
 
-Графические (GUI) библиотеки
-============================
+a[0] = 10;
+Если я перебираю элементы массива используя индексы
+то я могу модифицировать элементы массива
+[09_ReflectionTask_SaveLoad/src/main/java/foreach/ForEach.java](09_ReflectionTask_SaveLoad/src/main/java/foreach/ForEach.java)
 
+Разбор обычных URL
+``` java
+        URL url = new URL("http://ya.ru/");
+        assertEquals("Протокол", "http", url.getProtocol());
+        assertEquals("Доменное имя сайта", "ya.ru", url.getHost());
+        assertEquals("Путь от корня сайта", "/", url.getPath());
+```
+
+Добавляем свой обработчик нестандартных протоколов
+Вывод протокола для отладки:
+System.out.println("protocol = " + protocol);
+Для протокола chrome://
+Проверяем разбор нестандартного URL
+Разбор стандартных URL по-прежнему работает
+System.out.println(url.getContent());
+[10_URL/src/test/java/URLTest.java](10_URL/src/test/java/URLTest.java)
+
+Графические (GUI) библиотеки
+----------------------------
 1. AWT - Abstract Window Toolkit
 2. Swing -
 3. JavaFX
+
+SimpleDateFormat simpleDateFormat = new SimpleDateFormat("mm:");
+Сколько секунд прошло
+System.out.println("inSecond: " + inSeconds);
+[11_Timer/src/main/java/MainForm.java](11_Timer/src/main/java/MainForm.java)
+
+Создаём окно и задаём ему заголовок
+Создаём класс, соответствующий нашей форме
+Основную панель помещаем внутрь окна
+Размещение компонент внутри окна
+рекурсивное определение размеров компонент
+Когда закрываем этот frame => закроется всё приложение
+Обычно задаётся для "основного" окна приложения
+Показываем окно
+[15_SwingDemo2/src/main/java/MainForm.java](15_SwingDemo2/src/main/java/MainForm.java)
 
 ``` cpp
 #include <iostream>
@@ -642,8 +1080,14 @@ int main(){
 
 [98_XORTest/cpp_check.cpp](98_XORTest/cpp_check.cpp)
 
-Стек и очередь на Java
-======================
+x = 2;
+a = x+x;
+b = 2*x + x + x;
+a              b
+[98_XORTest/src/main/java/Main.java](98_XORTest/src/main/java/Main.java)
+
+Стек и очередь на Java (Generics)
+---------------------------------
 
 Стек: Stack<T>
 * push добавить на вершину
@@ -673,8 +1117,37 @@ assertEquals("Hello", queue.get());
 assertEquals("world", queue.get());
 ````
 
+...
+[Q1/src/main/java/Resume.java](Q1/src/main/java/Resume.java)
+
+sendEmail();
+[Q1/src/main/java/User.java](Q1/src/main/java/User.java)
+
+Создаём тестового пользователя
+Параметры
+[Q1/src/test/java/UserTest.java](Q1/src/test/java/UserTest.java)
+
+Получаю значения из интерфейса
+Сумма чисел
+Отправляю результат в интерфейс
+[SwingDemo/src/main/java/MainForm.java](SwingDemo/src/main/java/MainForm.java)
+
+
+Свой односвязанный список
+-------------------------
+Тип элементов - T
+Новый элемент становится первым
+и ссылается на тот список, который был до операции
+добавления
+Новый элемент -> последний
+Новый элемент добавляем в конец списка
+[Task_Generic/src/main/java/MyList.java](Task_Generic/src/main/java/MyList.java)
+
+Восстанавливаем вывод на консоль
+[Task_Generic/src/test/java/ListTest.java](Task_Generic/src/test/java/ListTest.java)
+
 Аgitация: система контроля версий Git
--------------------------------------
+=====================================
 
 Зачем нужны и в чём полезны системы контроля версий?
 * Устойчивость / уверенность - вы всегда можете вернуться к "хорошей" / "удачной" версии программы
@@ -728,11 +1201,14 @@ JVMS
 Книга
 
 
-﻿Домашнее задание:
------------------
+﻿Домашнее задание
+================
 
-Сохранение и загрузка через Reflection API
-------------------------------------------
+Свой односвязанный список (Generics)
+------------------------------------
+
+Сохранение и загрузка произвольного класса через Reflection API
+---------------------------------------------------------------
 Дан класс с полями всех примитивных типов:
 ```
 public class AllCases {
@@ -758,8 +1234,8 @@ public class FileStorage {
 }
 ```
 
-Работа над проектом (ядро):
----------------------------
+Работа над своим проектом (ядро)
+--------------------------------
 * Договориться о проекте (объединиться в команды по 2-3 человека)
 * Дополнить классы модели конструкторами, equals, hashCode, toString.
 * Реализовать типы объектной модели через enum.

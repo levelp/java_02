@@ -3,7 +3,6 @@ package levelp;
 import static java.lang.Math.*;
 
 // Практика: Решение квадратного уравнения
-// ---------------------------------------
 public class SquareEq {
 
     //-->

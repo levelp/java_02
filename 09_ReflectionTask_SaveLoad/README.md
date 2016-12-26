@@ -2,7 +2,7 @@
 TODO: реализовать
 Получаем объект-класс того объекта
 который надо сохранить
-Печатаем имя класса
+Печатаем имя класса в файл
 Сохраняем все поля: c.getDeclaredFields()
 Получаем доступ к
 private/protected/package local
@@ -21,8 +21,8 @@ scanner.next() читает символы
 if (field.getType().equals(Double.TYPE)) {
 field.set(instance, scanner.nextDouble());
 }
-Как присвоить значение полю произвольного типа?
-----------------------------------------------
+**Как присвоить значение полю произвольного типа?**
+
 Способ 1 - "много if":
 ``` java
             if (field.getType().equals(Double.TYPE))
@@ -38,6 +38,8 @@ field.set(instance, scanner.nextDouble());
                 System.out.println("typeName = " + typeName);
 
                 String fieldClassName;
+                // int - Integer
+                // char - Character
                 if (field.getType().equals(Integer.TYPE))
                     fieldClassName = Integer.class.getName();
                 else if (field.getType().equals(Character.TYPE))
@@ -52,4 +54,9 @@ field.set(instance, scanner.nextDouble());
 
 null - для статических методов
 [src/main/java/FileStorage.java](src/main/java/FileStorage.java)
+
+a[0] = 10;
+Если я перебираю элементы массива используя индексы
+то я могу модифицировать элементы массива
+[src/main/java/foreach/ForEach.java](src/main/java/foreach/ForEach.java)
 

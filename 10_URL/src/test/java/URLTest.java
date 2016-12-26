@@ -11,17 +11,15 @@ import java.net.URLStreamHandler;
  */
 public class URLTest extends Assert {
 
-    /**
-     * Разбор обычных URL
-     *
-     * @throws IOException
-     */
+    // Разбор обычных URL
     @Test
     public void testUrlParsing() throws IOException {
+        //-->
         URL url = new URL("http://ya.ru/");
         assertEquals("Протокол", "http", url.getProtocol());
         assertEquals("Доменное имя сайта", "ya.ru", url.getHost());
         assertEquals("Путь от корня сайта", "/", url.getPath());
+        //<--
     }
 
     /**

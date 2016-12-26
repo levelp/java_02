@@ -1,8 +1,6 @@
 import org.junit.Test;
 
-/**
- * Тестирование работы с нескольникими фигурами
- */
+/// Тестирование работы с нескольникими фигурами
 public class ShapesTest {
 
     /**
@@ -14,6 +12,7 @@ public class ShapesTest {
      */
     @Test
     public void shapesArray() {
+        //-->
         // Треугольник
         Triangle triangle = new Triangle("Треугольник 1",
                 new Point("A", 1, 2),
@@ -34,5 +33,6 @@ public class ShapesTest {
             shape.show();
         }
         // assertEquals();
+        //<--
     }
 }

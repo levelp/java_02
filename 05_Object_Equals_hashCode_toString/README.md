@@ -1,5 +1,6 @@
 <!-- doc.py -->
 
+
 Использование ссылки this
 -------------------------
 ``` java
@@ -29,8 +30,13 @@
 
 [src/main/java/ThisLink.java](src/main/java/ThisLink.java)
 
+Object, toString. Сравнение объектов: equals, hashCode. Контракт между equals и hashCode
+----------------------------------------------------------------------------------------
+o1.equals(o2) == true  =>  o1.hashCode() == o2.hashCode()
+Точка
 Координаты
+При вычислении hashCode должны участвовать те же поля что и в equals
 http://stackoverflow.com/questions/27581/what-issues-should-be-considered-when-overriding-equals-and-hashcode-in-java
-Double.hashCode(y);
+Wrong: return 1;
 [src/main/java/geometry/Point.java](src/main/java/geometry/Point.java)
 

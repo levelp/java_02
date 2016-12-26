@@ -24,6 +24,8 @@
     <modules>
         <module>${firstModule}</module>
         <module>01_enum</module>
+        <module>01_Exceptions</module>
+        <module>02_StringBuilder</module>
         <module>02_BoxingUnboxing</module>
         <module>03_Reflection</module>
         <module>05_Memory</module>

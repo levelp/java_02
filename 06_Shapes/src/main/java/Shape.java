@@ -1,6 +1,5 @@
-/**
- * Фигура
- */
+/// Фигура
+//-->
 public abstract class Shape {
     protected final String name;
 
@@ -13,3 +12,4 @@ public abstract class Shape {
      */
     abstract void show();
 }
+//<--

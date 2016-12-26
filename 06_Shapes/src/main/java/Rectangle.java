@@ -1,6 +1,5 @@
-/**
- * Прямоугольник
- */
+/// Прямоугольник
+//-->
 public class Rectangle extends Shape {
     public Rectangle(String name, Point leftTop, Point rightBottom) {
         super(name);
@@ -11,3 +10,4 @@ public class Rectangle extends Shape {
        // TODO: показать
     }
 }
+//<--

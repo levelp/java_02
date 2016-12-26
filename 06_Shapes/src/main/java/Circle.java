@@ -1,6 +1,5 @@
-/**
- *
- */
+// Круг
+//-->
 public class Circle extends Shape {
     public Circle(String name, double radius) {
         super(name);
@@ -11,3 +10,4 @@ public class Circle extends Shape {
         // TODO: показать
     }
 }
+//<--

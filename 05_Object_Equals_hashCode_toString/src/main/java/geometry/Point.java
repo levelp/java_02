@@ -1,8 +1,9 @@
 package geometry;
 
-/**
- * Точка
- */
+/// Object, toString. Сравнение объектов: equals, hashCode. Контракт между equals и hashCode
+/// ----------------------------------------------------------------------------------------
+/// o1.equals(o2) == true  =>  o1.hashCode() == o2.hashCode()
+/// Точка
 public class Point {
     private static final double DELTA = 1e-15;
     // Координаты
@@ -33,6 +34,7 @@ public class Point {
                 Math.abs(y - point.y) < DELTA;
     }
 
+    /// При вычислении hashCode должны участвовать те же поля что и в equals
     @Override
     public int hashCode() {
         // http://stackoverflow.com/questions/27581/what-issues-should-be-considered-when-overriding-equals-and-hashcode-in-java

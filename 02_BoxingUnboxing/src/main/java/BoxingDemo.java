@@ -1,6 +1,5 @@
-/**
- *
- */
+/// Параметры методов. Преобразование типов. Boxing, Unboxing
+/// ---------------------------------------------------------
 public class BoxingDemo {
     public static void main(String[] args) {
         // Boxing
